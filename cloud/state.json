@@ -1,4 +1,14 @@
 {
+ "j:6630877:2026-10-11": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-11",
+  "cat": "bbq",
+  "name": "일반바베큐 오후(8인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630877"
+ },
  "j:6630650:2026-10-11": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -9,6 +19,16 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630650"
  },
+ "j:5752252:2026-10-25": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-25",
+  "cat": "bbq",
+  "name": "바베큐(커플/가족-4인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5752252"
+ },
  "j:7526537:2026-10-25": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -16,7 +36,7 @@
   "date": "2026-10-25",
   "cat": "bbq",
   "name": "감성바베큐 오후(4인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7526537"
  },
  "j:6713469:2026-10-24": {
@@ -103,13 +123,6 @@
   "name": "일반캠핑존 B형(4인용, 자갈형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901180953339326"
  },
- "n:S260901181759847800": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "camp",
-  "name": "일반캠핑존 C형(4인용, 데크형)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800"
- },
  "n:S260901182351878139": {
   "src": "nanji",
   "month": 10,
@@ -130,6 +143,20 @@
   "cat": "bbq",
   "name": "바비큐존(4인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184107910799"
+ },
+ "n:S260901184513427044": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "bbq",
+  "name": "바비큐존(8인용, 1차:11시~16시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184513427044"
+ },
+ "n:S260901183456275036": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "bbq",
+  "name": "캠프파이어존 (15인용, 19시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901183456275036"
  },
  "_sources": [
   "angbong",
