@@ -35,6 +35,8 @@ jobs:
         run: python monitor.py
 
       - name: 상태 저장
+        env:
+          TZ: Asia/Seoul
         run: |
           git config user.name "campsite-bot"
           git config user.email "campsite-bot@users.noreply.github.com"
