@@ -1,0 +1,4 @@
+.secrets/
+data/
+__pycache__/
+cloud/status.json

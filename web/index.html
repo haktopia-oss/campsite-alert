@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주말 캠핑 빈자리</title>
+<style>
+:root{
+  --bg:#f6f5f1; --card:#fff; --ink:#1d2320; --sub:#6b726e; --line:#e4e2dc;
+  --ok:#1f8a4c; --ok-bg:#e3f4ea; --no:#9aa09c; --no-bg:#efeeea; --wait:#b7791f; --wait-bg:#fbf0dc;
+  --accent:#2f5d50; --hol:#c2410c;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#141816; --card:#1c211f; --ink:#e7ebe8; --sub:#98a19c; --line:#2c3330;
+    --ok:#5fd08f; --ok-bg:#1d3327; --no:#6f7773; --no-bg:#232826; --wait:#e0b060; --wait-bg:#3a2f1b;
+    --accent:#7fc3ae; --hol:#fb923c;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-bottom:14px}
+h1{font-size:22px;margin:0;flex:1 1 auto}
+.meta{color:var(--sub);font-size:13px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:1px}
+.dot.busy{background:var(--wait);animation:blink 1s infinite}
+.dot.err{background:#d33}
+@keyframes blink{50%{opacity:.3}}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 12px}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+.chip{border-radius:999px;padding:5px 14px}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+section{margin-top:26px}
+h2{font-size:17px;margin:0 0 4px}
+.note{color:var(--sub);font-size:13px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
+.day.ok{border-color:var(--ok);box-shadow:inset 4px 0 0 var(--ok)}
+.day.full,.day.closed{opacity:.72}
+.day .d{font-weight:700;font-size:16px}
+.day .hol{color:var(--hol);font-size:12px;margin-left:6px;font-weight:600}
+.badge{display:inline-block;font-size:12px;font-weight:600;border-radius:6px;padding:1px 8px;margin-top:6px}
+.b-ok{background:var(--ok-bg);color:var(--ok)} .b-no{background:var(--no-bg);color:var(--no)} .b-wait{background:var(--wait-bg);color:var(--wait)}
+.day ul{list-style:none;margin:10px 0 0;padding:10px 0 0;border-top:1px dashed var(--line);font-size:13px}
+.day li{display:flex;justify-content:space-between;gap:8px;padding:2px 0}
+.day li a{color:var(--ink);text-decoration:none} .day li a:hover{text-decoration:underline}
+.day li .r{color:var(--ok);font-weight:700;white-space:nowrap}
+.cat{color:var(--sub);font-size:11px;margin-right:4px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+td{padding:9px 12px;border-top:1px solid var(--line);font-size:14px}
+tr:first-child td{border-top:0}
+td a{color:var(--ink)}
+.month{font-weight:700;color:var(--sub);font-size:13px;width:56px}
+.alerts{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px 14px}
+.alert{padding:10px 0;border-top:1px solid var(--line);font-size:13px;white-space:pre-wrap}
+.alert:first-child{border-top:0}
+.alert .t{color:var(--sub);font-size:12px}
+.empty{color:var(--sub);padding:14px;text-align:center}
+.err{color:#d33;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🏕️ 주말 캠핑 빈자리</h1>
+    <span class="meta" id="meta">불러오는 중…</span>
+    <button class="primary" id="btnCheck">지금 확인</button>
+  </header>
+
+  <div class="chips" id="chips">
+    <button class="chip" data-cat="camp">캠핑</button>
+    <button class="chip" data-cat="glamp">글램핑</button>
+    <button class="chip" data-cat="bbq">바베큐</button>
+    <span style="flex:1"></span>
+    <button class="chip" id="onlyOk">빈자리 있는 날만</button>
+  </div>
+  <div class="err" id="errors"></div>
+
+  <p class="note">토·일 + 주말과 이어진 공휴일만 표시 (캠핑·글램핑은 그날 밤 1박 기준).</p>
+  <div id="dated"></div>
+
+  <section>
+    <h2>난지캠핑장</h2>
+    <p class="note">서울시 공공예약 존별 상태. '접수중'이면 그 달 어딘가에 자리가 있다는 뜻 — 주말 여부는 링크에서 확인.</p>
+    <div id="nj"></div>
+  </section>
+
+  <section>
+    <h2>최근 알림</h2>
+    <div class="alerts" id="alerts"></div>
+  </section>
+</div>
+
+<script>
+const CAT = {camp:"캠핑", glamp:"글램핑", bbq:"바베큐"};
+const WD = "월화수목금토일";
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v) }catch{ return d } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)) }catch{} }
+};
+let cats = new Set(store.get("cats", ["camp","glamp","bbq"]));
+let onlyOk = store.get("onlyOk", false);
+let open = new Set();
+let data = null;
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hm = iso => iso ? iso.slice(11,16) : "-";
+
+function renderChips(){
+  document.querySelectorAll(".chip[data-cat]").forEach(b => b.classList.toggle("on", cats.has(b.dataset.cat)));
+  $("#onlyOk").classList.toggle("on", onlyOk);
+}
+
+function renderMeta(){
+  const dot = data.running ? "busy" : (data.last_error || Object.keys(data.errors||{}).length ? "err" : "");
+  $("#meta").innerHTML = `<span class="dot ${dot}"></span>` +
+    (data.running ? "확인 중… · " : "") +
+    `마지막 확인 ${hm(data.checked_at)} · 다음 ${hm(data.next_check)} · ` +
+    (data.cloud ? `알림: ☁️ 클라우드(10분)` : `텔레그램 ${data.telegram ? "✓" : "✗"} · 카톡 ${data.kakao ? "✓" : "✗"}`);
+  const errs = Object.entries(data.errors||{}).map(([k,v]) => `${data.sources?.[k]?.name || k} 수집 오류: ${v}`);
+  if (data.last_error) errs.push("감시 오류: " + data.last_error);
+  $("#errors").textContent = errs.join(" / ");
+}
+
+const NOTES = {
+  jungnang: "네이버예약 · 오늘부터 30일까지만 열려요.",
+  uidong: "xticket · 사이트 전체 합계 · 매월 10일 다음 달 오픈.",
+  angbong: "xticket · 사이트 전체 합계 · 매월 10일 다음 달 오픈.",
+  choan: "노원구시설관리공단 · 구역별 잔여 · 매월 9일 다음 달 오픈. (피크닉장=당일, 캐빈=글램핑으로 분류)",
+};
+
+function renderDatedSource(src){
+  const j = data.sources?.[src];
+  if (!j) return `<section><h2>${esc(src)}</h2><div class="empty">데이터 없음</div></section>`;
+  const items = Object.fromEntries(j.items.map(i => [i.id, i]));
+  const byDate = {};
+  for (const s of j.slots){
+    const it = items[s.item];
+    if (!it || !cats.has(it.cat)) continue;
+    (byDate[s.date] ??= []).push({...s, it});
+  }
+  const html = Object.keys(byDate).sort().map(ymd => {
+    const list = byDate[ymd];
+    const isOpen = list.some(s => s.open);
+    const avail = list.filter(s => s.open && s.remain > 0);
+    const total = avail.reduce((a,s) => a + s.remain, 0);
+    if (onlyOk && !avail.length) return "";
+    const meta = data.days[ymd] || {};
+    const [, m, d] = ymd.split("-").map(Number);
+    const cls = avail.length ? "ok" : (isOpen ? "full" : "closed");
+    const badge = avail.length
+      ? `<span class="badge b-ok">빈자리 ${total}</span>`
+      : isOpen ? `<span class="badge b-no">만석</span>` : `<span class="badge b-wait">예약 오픈 전</span>`;
+    const byCat = Object.keys(CAT).filter(c => cats.has(c)).map(c => {
+      const n = avail.filter(s => s.it.cat === c).reduce((a,s)=>a+s.remain,0);
+      return n ? `${CAT[c]} ${n}` : "";
+    }).filter(Boolean).join(" · ");
+    const key = src + "|" + ymd;
+    const detail = open.has(key) && avail.length ? `<ul>${avail.sort((a,b)=>a.it.cat.localeCompare(b.it.cat)).map(s =>
+      `<li><a href="${esc(s.it.url)}" target="_blank" rel="noopener"><span class="cat">${CAT[s.it.cat]}</span>${esc(s.it.name)}</a><span class="r">${s.remain}</span></li>`
+    ).join("")}</ul>` : "";
+    return `<div class="day ${cls}" data-key="${esc(key)}">
+      <div class="d">${m}/${d} (${WD[meta.wd]})${meta.holiday ? `<span class="hol">${esc(meta.holiday)}</span>` : ""}</div>
+      ${badge}${byCat ? ` <span class="meta">${byCat}</span>` : ""}${detail}</div>`;
+  }).join("");
+  return `<section><h2><a href="${esc(j.url)}" target="_blank" rel="noopener" style="color:inherit">${esc(j.name)}</a></h2>
+    <p class="note">${NOTES[src] || ""}</p>
+    <div class="grid">${html || `<div class="empty">조건에 맞는 주말 날짜가 없어요</div>`}</div></section>`;
+}
+
+function renderDated(){
+  $("#dated").innerHTML = (data.dated || ["jungnang"]).map(renderDatedSource).join("");
+}
+
+function renderNanji(){
+  const n = data.sources?.nanji;
+  if (!n){ $("#nj").innerHTML = `<div class="empty">데이터 없음</div>`; return; }
+  const rows = n.zones.filter(z => cats.has(z.cat) && (!onlyOk || z.open)).map(z =>
+    `<tr><td class="month">${z.month ?? ""}월</td>
+      <td><span class="cat">${CAT[z.cat]}</span><a href="${esc(z.url)}" target="_blank" rel="noopener">${esc(z.zone)}</a></td>
+      <td style="text-align:right"><span class="badge ${z.open ? "b-ok" : "b-no"}">${esc(z.status)}</span></td></tr>`).join("");
+  $("#nj").innerHTML = rows ? `<table>${rows}</table>` : `<div class="empty">조건에 맞는 항목이 없어요</div>`;
+}
+
+function renderAlerts(){
+  const a = data.alerts || [];
+  $("#alerts").innerHTML = a.length ? a.map(x =>
+    `<div class="alert"><div class="t">${esc(x.at.replace("T"," "))}${x.error ? ` · <span class="err">알림 실패</span>` : ""}</div>${esc(x.text)}</div>`
+  ).join("") : `<div class="empty">아직 보낸 알림이 없어요</div>`;
+}
+
+function render(){ if (!data) return; renderChips(); renderMeta(); renderDated(); renderNanji(); renderAlerts(); }
+
+async function load(){
+  try{
+    data = await (await fetch("/api/status")).json();
+    render();
+  }catch(e){ $("#meta").textContent = "서버에 연결할 수 없어요 — run.bat 을 실행하세요"; }
+}
+
+document.querySelectorAll(".chip[data-cat]").forEach(b => b.onclick = () => {
+  const c = b.dataset.cat;
+  cats.has(c) ? cats.delete(c) : cats.add(c);
+  store.set("cats", [...cats]); render();
+});
+$("#onlyOk").onclick = () => { onlyOk = !onlyOk; store.set("onlyOk", onlyOk); render(); };
+$("#dated").onclick = e => {
+  const card = e.target.closest(".day"); if (!card || e.target.closest("a")) return;
+  const k = card.dataset.key; open.has(k) ? open.delete(k) : open.add(k); render();
+};
+$("#btnCheck").onclick = async () => {
+  await fetch("/api/check", {method:"POST"});
+  data && (data.running = true, renderMeta());
+  const t = setInterval(async () => { await load(); if (!data.running){ clearInterval(t); } }, 1500);
+};
+
+renderChips();
+load();
+setInterval(load, 20000);
+</script>
+</body>
+</html>

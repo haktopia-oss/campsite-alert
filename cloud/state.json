@@ -1,0 +1,188 @@
+{
+ "j:6630650:2026-10-11": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-11",
+  "cat": "bbq",
+  "name": "프리미엄 단체 바베큐(텐트-10인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630650"
+ },
+ "j:7526537:2026-10-25": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-25",
+  "cat": "bbq",
+  "name": "감성바베큐 오후(4인)",
+  "remain": 2,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7526537"
+ },
+ "j:6713469:2026-10-05": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-05",
+  "cat": "bbq",
+  "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
+ },
+ "j:6713469:2026-10-24": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-24",
+  "cat": "bbq",
+  "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
+  "remain": 3,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
+ },
+ "j:6713469:2026-10-25": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-25",
+  "cat": "bbq",
+  "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
+  "remain": 2,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
+ },
+ "j:6861189:2026-10-05": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-05",
+  "cat": "glamp",
+  "name": "글램핑(4인/주말(금-일) 및 공휴일)",
+  "remain": 4,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "j:6861189:2026-10-11": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-11",
+  "cat": "glamp",
+  "name": "글램핑(4인/주말(금-일) 및 공휴일)",
+  "remain": 4,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "j:6861189:2026-10-18": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-18",
+  "cat": "glamp",
+  "name": "글램핑(4인/주말(금-일) 및 공휴일)",
+  "remain": 4,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "j:6861189:2026-10-24": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-24",
+  "cat": "glamp",
+  "name": "글램핑(4인/주말(금-일) 및 공휴일)",
+  "remain": 2,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "j:6861189:2026-10-25": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-25",
+  "cat": "glamp",
+  "name": "글램핑(4인/주말(금-일) 및 공휴일)",
+  "remain": 4,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "n:S260901174901777245": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "일반캠핑존 A형(2인용, 자갈형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901174901777245"
+ },
+ "n:S260901180953339326": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "일반캠핑존 B형(4인용, 자갈형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901180953339326"
+ },
+ "n:S260901181759847800": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "일반캠핑존 C형(4인용, 데크형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800"
+ },
+ "n:S260901182351878139": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "일반캠핑존 D형(4인용, 자갈형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901182351878139"
+ },
+ "n:S260901173224696584": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "프리캠핑존 (4인용, 잔디형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901173224696584"
+ },
+ "n:S260901190114685806": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "bbq",
+  "name": "바비큐존(12인용, 2차:17시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901190114685806"
+ },
+ "n:S260901184107910799": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "bbq",
+  "name": "바비큐존(4인용, 1차:11시~16시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184107910799"
+ },
+ "_sources": [
+  "angbong",
+  "choan",
+  "jungnang",
+  "nanji",
+  "uidong"
+ ],
+ "_nanji_opened": [
+  "n:S260729100609551164",
+  "n:S260729101755325768",
+  "n:S260729102620826866",
+  "n:S260729103022448047",
+  "n:S260729103658148259",
+  "n:S260729104106356376",
+  "n:S260729104519089622",
+  "n:S260729104943631460",
+  "n:S260729105330085270",
+  "n:S260729105719293666",
+  "n:S260729110026510256",
+  "n:S260729110549597697",
+  "n:S260729110910483894",
+  "n:S260729111306852786",
+  "n:S260901165106276774",
+  "n:S260901173224696584",
+  "n:S260901174901777245",
+  "n:S260901180953339326",
+  "n:S260901181759847800",
+  "n:S260901182351878139",
+  "n:S260901182931610921",
+  "n:S260901183456275036",
+  "n:S260901184107910799",
+  "n:S260901184513427044",
+  "n:S260901184915538627",
+  "n:S260901185416139502",
+  "n:S260901185737192457",
+  "n:S260901190114685806"
+ ]
+}
