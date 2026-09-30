@@ -3,3 +3,4 @@ data/
 __pycache__/
 cloud/status.json
 config.json
+_site/

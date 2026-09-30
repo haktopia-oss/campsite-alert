@@ -6,14 +6,10 @@
 <title>주말 캠핑 빈자리</title>
 <style>
 :root{
-  --bg:#f6f5f1; --card:#fff; --ink:#1d2320; --sub:#6b726e; --line:#e4e2dc;
+  color-scheme: light;
+  --bg:#ffffff; --card:#fff; --ink:#1d2320; --sub:#6b726e; --line:#e2e4e3;
   --ok:#1f8a4c; --ok-bg:#e3f4ea; --no:#9aa09c; --no-bg:#efeeea; --wait:#b7791f; --wait-bg:#fbf0dc;
   --accent:#2f5d50; --hol:#c2410c;
-}
-@media (prefers-color-scheme: dark){
-  :root{--bg:#141816; --card:#1c211f; --ink:#e7ebe8; --sub:#98a19c; --line:#2c3330;
-    --ok:#5fd08f; --ok-bg:#1d3327; --no:#6f7773; --no-bg:#232826; --wait:#e0b060; --wait-bg:#3a2f1b;
-    --accent:#7fc3ae; --hol:#fb923c;}
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}
@@ -33,10 +29,10 @@ button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 section{margin-top:26px}
 h2{font-size:17px;margin:0 0 4px}
 .note{color:var(--sub);font-size:13px;margin:0 0 12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}
 .day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
 .day.ok{border-color:var(--ok);box-shadow:inset 4px 0 0 var(--ok)}
-.day.full,.day.closed{opacity:.72}
+.day.full,.day.closed{opacity:.72;background:#fafafa}
 .day .d{font-weight:700;font-size:16px}
 .day .hol{color:var(--hol);font-size:12px;margin-left:6px;font-weight:600}
 .badge{display:inline-block;font-size:12px;font-weight:600;border-radius:6px;padding:1px 8px;margin-top:6px}
@@ -116,7 +112,8 @@ function renderMeta(){
   const dot = data.running ? "busy" : (data.last_error || Object.keys(data.errors||{}).length ? "err" : "");
   $("#meta").innerHTML = `<span class="dot ${dot}"></span>` +
     (data.running ? "확인 중… · " : "") +
-    `마지막 확인 ${hm(data.checked_at)} · 다음 ${hm(data.next_check)} · ` +
+    `마지막 확인 ${data.checked_at ? data.checked_at.slice(5,10).replace("-","/") + " " + hm(data.checked_at) : "-"}` +
+    (data.next_check ? ` · 다음 ${hm(data.next_check)}` : "") + " · " +
     (data.cloud ? `알림: ☁️ 클라우드(10분)` : `텔레그램 ${data.telegram ? "✓" : "✗"} · 카톡 ${data.kakao ? "✓" : "✗"}`);
   const errs = Object.entries(data.errors||{}).map(([k,v]) => `${data.sources?.[k]?.name || k} 수집 오류: ${v}`);
   if (data.last_error) errs.push("감시 오류: " + data.last_error);
@@ -192,11 +189,17 @@ function renderAlerts(){
 
 function render(){ if (!data) return; renderChips(); renderMeta(); renderDated(); renderNanji(); renderAlerts(); }
 
+let STATIC = false;
 async function load(){
   try{
-    data = await (await fetch("/api/status")).json();
+    const r = await fetch(STATIC ? "status.json?t=" + Date.now() : "/api/status");
+    if (!r.ok) throw 0;
+    data = await r.json();
     render();
-  }catch(e){ $("#meta").textContent = "서버에 연결할 수 없어요 — run.bat 을 실행하세요"; }
+  }catch(e){
+    if (!STATIC){ STATIC = true; $("#btnCheck").style.display = "none"; return load(); }
+    $("#meta").textContent = "데이터를 불러올 수 없어요";
+  }
 }
 
 document.querySelectorAll(".chip[data-cat]").forEach(b => b.onclick = () => {

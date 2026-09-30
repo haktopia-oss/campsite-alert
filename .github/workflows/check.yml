@@ -11,11 +11,16 @@ concurrency:
 
 permissions:
   contents: write            # cloud/ 상태 파일 커밋용
+  pages: write               # 폰용 대시보드(GitHub Pages) 배포
+  id-token: write
 
 jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,6 +38,20 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python monitor.py
+
+      - name: 폰용 대시보드 만들기
+        env:
+          DATA_DIR: cloud
+          TZ: Asia/Seoul
+        run: python dashboard.py _site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true   # 배포가 실패해도 상태 저장은 계속
 
       - name: 상태 저장
         env:

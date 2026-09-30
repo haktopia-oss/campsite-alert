@@ -15,10 +15,10 @@ from pathlib import Path
 import requests
 
 import collect
+import dashboard
 import kakao
 import monitor
 import telegram
-from collectors.common import holiday_name
 
 ROOT = Path(__file__).parent
 PORT = 8765
@@ -83,14 +83,8 @@ def status() -> dict:
         alerts = cloud_alerts(repo)
     else:
         alerts = json.loads(monitor.ALERTS.read_text(encoding="utf-8")) if monitor.ALERTS.exists() else []
-    days = {}
-    for src, _, _ in collect.DATED:
-        for sl in (s.get("sources", {}).get(src) or {}).get("slots", []):
-            d = date.fromisoformat(sl["date"])
-            days[sl["date"]] = {"wd": d.weekday(), "holiday": holiday_name(d)}
-    return {**s, "days": days, "dated": [k for k, _, _ in collect.DATED], "alerts": alerts[:20], "interval": INTERVAL,
-            "kakao": kakao.configured(),
-            "telegram": telegram.configured(), "cloud": repo, **_info}
+    return dashboard.build(s, alerts, interval=INTERVAL, kakao=kakao.configured(),
+                           telegram=telegram.configured(), cloud=repo, **_info)
 
 
 class H(BaseHTTPRequestHandler):
