@@ -46,6 +46,7 @@ jobs:
         run: python dashboard.py _site
 
       - uses: actions/configure-pages@v5
+        continue-on-error: true   # Pages 설정 전이어도 감시는 계속
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
