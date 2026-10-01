@@ -48,6 +48,18 @@ def is_weekend(d: date) -> bool:
     return False
 
 
+def wanted(d: date, cat: str) -> bool:
+    """알림·표시 대상 날짜인지.
+
+    바베큐(당일): 토·일 + 주말과 이어진 공휴일.
+    캠핑·글램핑(1박): 그날이 쉬는 날이고 '다음 날도 쉬는 날'인 밤만
+      → 토요일 밤, 다음날(월)이 공휴일인 일요일 밤, 공휴일 금요일 밤 등.
+    """
+    if not is_weekend(d):
+        return False
+    return cat == "bbq" or _off(d + timedelta(days=1))
+
+
 def categorize(name: str) -> str:
     """상품명 → camp / glamp / bbq."""
     if "글램핑" in name:

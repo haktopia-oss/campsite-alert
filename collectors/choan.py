@@ -7,7 +7,7 @@ from datetime import date
 
 import urllib3
 
-from .common import is_weekend, session
+from .common import session, wanted
 from .xticket import _months
 
 BASE = "https://nowonsc.moonhwain.kr:447"
@@ -42,7 +42,7 @@ def collect(months: int = 2) -> dict:
     slots = []
     for (idx, ymd), n in cells.items():
         d = date.fromisoformat(ymd)
-        if d < today or not is_weekend(d):
+        if d < today or not wanted(d, _cat(items[idx])):
             continue
         slots.append({"item": idx, "date": ymd, "stock": n, "remain": n, "open": True})
     return {"name": "초안산캠핑장", "url": MAIN,

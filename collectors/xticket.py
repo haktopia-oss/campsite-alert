@@ -5,7 +5,7 @@
 """
 from datetime import date
 
-from .common import is_weekend, session
+from .common import session, wanted
 
 BASE = "https://camp.xticket.kr"
 
@@ -39,7 +39,7 @@ def collect(name: str, shop_encode: str, months: int = 2) -> dict:
             if len(pd) != 8:
                 continue
             d = date(int(pd[:4]), int(pd[4:6]), int(pd[6:]))
-            if d < today or not is_weekend(d):
+            if d < today or not wanted(d, "camp"):
                 continue
             remain = int(x.get("book_remain_count") or 0)
             slots.append({"item": "all", "date": d.isoformat(), "stock": remain,

@@ -2,7 +2,7 @@
 import re
 from datetime import date, datetime, timedelta
 
-from .common import categorize, is_weekend, session
+from .common import categorize, session, wanted
 
 BUSINESS_ID = 387475
 API = f"https://api.booking.naver.com/v3.0/businesses/{BUSINESS_ID}"
@@ -50,7 +50,7 @@ def collect(today: date | None = None, horizon_days: int = 45) -> dict:
             continue
         for ymd, v in sched.items():
             d = date.fromisoformat(ymd)
-            if not is_weekend(d) or not v.get("isBusinessDay") or not v.get("isSaleDay"):
+            if not wanted(d, cat) or not v.get("isBusinessDay") or not v.get("isSaleDay"):
                 continue
             stock = v.get("stock") or 0
             if stock <= 0:
