@@ -34,6 +34,12 @@ def run() -> dict:
             result["sources"][key] = fn()
         except Exception as e:  # 한 곳이 실패해도 다른 곳은 계속
             result["errors"][key] = f"{type(e).__name__}: {e}"
+    if result["errors"] and STATUS.exists():
+        from dashboard import carry_over
+        try:
+            carry_over(result, json.loads(STATUS.read_text(encoding="utf-8")))
+        except ValueError:
+            pass
     STATUS.parent.mkdir(exist_ok=True)
     STATUS.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
     return result

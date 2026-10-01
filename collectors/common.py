@@ -2,6 +2,8 @@
 from datetime import date, timedelta
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
@@ -16,6 +18,12 @@ except ImportError:  # 없으면 토·일만으로 판정
 def session() -> requests.Session:
     s = requests.Session()
     s.headers["User-Agent"] = UA
+    # 접속 지연·끊김은 몇 번 더 시도 (2s, 4s, 8s 간격)
+    retry = Retry(total=3, connect=3, read=2, backoff_factor=2,
+                  status_forcelist=(502, 503, 504), allowed_methods=None)
+    adapter = HTTPAdapter(max_retries=retry)
+    s.mount("https://", adapter)
+    s.mount("http://", adapter)
     return s
 
 

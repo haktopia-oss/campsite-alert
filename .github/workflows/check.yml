@@ -43,6 +43,7 @@ jobs:
         env:
           DATA_DIR: cloud
           TZ: Asia/Seoul
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: python dashboard.py _site
 
       - uses: actions/configure-pages@v5

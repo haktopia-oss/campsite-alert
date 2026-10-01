@@ -52,7 +52,7 @@ td a{color:var(--ink)}
 .alert:first-child{border-top:0}
 .alert .t{color:var(--sub);font-size:12px}
 .empty{color:var(--sub);padding:14px;text-align:center}
-.err{color:#d33;font-size:13px}
+.err{color:#b45309;font-size:13px}
 </style>
 </head>
 <body>
@@ -115,7 +115,11 @@ function renderMeta(){
     `마지막 확인 ${data.checked_at ? data.checked_at.slice(5,10).replace("-","/") + " " + hm(data.checked_at) : "-"}` +
     (data.next_check ? ` · 다음 ${hm(data.next_check)}` : "") + " · " +
     (data.cloud ? `알림: ☁️ 클라우드(10분)` : `텔레그램 ${data.telegram ? "✓" : "✗"} · 카톡 ${data.kakao ? "✓" : "✗"}`);
-  const errs = Object.entries(data.errors||{}).map(([k,v]) => `${data.sources?.[k]?.name || k} 수집 오류: ${v}`);
+  const NAMES = {jungnang:"중랑", uidong:"우이동", angbong:"앵봉산", choan:"초안산", nanji:"난지"};
+  const errs = Object.keys(data.errors||{}).map(k => {
+    const st = data.sources?.[k]?.stale_at;
+    return `⚠️ ${NAMES[k] || k}: 일시적 접속 실패` + (st ? ` — ${st.slice(5,10).replace("-","/")} ${hm(st)} 기준 데이터 표시 중` : "");
+  });
   if (data.last_error) errs.push("감시 오류: " + data.last_error);
   $("#errors").textContent = errs.join(" / ");
 }
