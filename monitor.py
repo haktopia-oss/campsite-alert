@@ -64,14 +64,18 @@ def messages(new: dict) -> list[tuple[str, str]]:
             text += f"\n…외 {len(lines) - 6}건"
         link = j[0]["url"] if len({v["url"] for v in j}) == 1 else j[0]["home"]
         msgs.append((text, link))
-    n = [v for v in new.values() if v["src"] == "nanji"]
-    if n:
+    for kind, title, tail in (
+            ("open", "🏕️ 난지캠핑장 새 달 예약 오픈!", "(주말 여부는 달력에서 확인)"),
+            ("reopen", "🏕️ 난지캠핑장 마감→접수중 (취소표)", "⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인")):
+        n = [v for v in new.values() if v["src"] == "nanji" and v.get("kind") == kind]
+        if not n:
+            continue
         n.sort(key=lambda v: (v["month"] or 0, v["cat"]))
         lines = [f"• {v['month']}월 [{CAT[v['cat']]}] {v['name'][:20]}" for v in n]
-        text = "🏕️ 난지캠핑장 새 달 예약 오픈!\n" + "\n".join(lines[:6])
+        text = title + "\n" + "\n".join(lines[:6])
         if len(lines) > 6:
             text += f"\n…외 {len(lines) - 6}건"
-        text += "\n(주말 여부는 달력에서 확인)"
+        text += "\n" + tail
         msgs.append((text, n[0]["url"]))
     return msgs
 
@@ -90,8 +94,7 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
     prev = {} if first else json.loads(STATE.read_text(encoding="utf-8"))
     # 처음 보는 캠핑장은 이번엔 기준선만 저장 (추가 직후 알림 폭탄 방지)
     seen = set(prev.pop("_sources", ["jungnang", "nanji"] if prev else []))
-    # 난지는 날짜를 모름 → 같은 달이 마감↔접수중 오가는 건(대부분 평일 취소) 무시하고,
-    # 해당 존·월이 '처음' 접수중이 될 때(새 달 오픈)만 알린다.
+    # 난지는 날짜를 모름 → 새 달 오픈(모든 존) + 마감→접수중(캠핑·글램핑 존만, 날짜는 직접 확인)
     had_nanji = "_nanji_opened" in prev
     nanji_opened = set(prev.pop("_nanji_opened", []))
 
@@ -100,8 +103,20 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
         prefix = collect.PREFIX[src] + ":"
         now.update({k: v for k, v in prev.items() if k.startswith(prefix)})
 
-    new = {k: v for k, v in now.items() if k not in prev and v["src"] in seen
-           and not (v["src"] == "nanji" and (k in nanji_opened or not had_nanji))}
+    new = {}
+    for k, v in now.items():
+        if k in prev or v["src"] not in seen:
+            continue
+        if v["src"] == "nanji":
+            if not had_nanji:
+                continue
+            if k not in nanji_opened:
+                v = {**v, "kind": "open"}        # 새 달 예약 오픈 (모든 존)
+            elif v["cat"] in ("camp", "glamp"):
+                v = {**v, "kind": "reopen"}      # 마감 → 접수중 = 취소표 (캠핑·글램핑만)
+            else:
+                continue                         # 바베큐·캠프파이어 재오픈은 무시
+        new[k] = v
     # 접수중·예약마감·접수종료 = 이미 한 번 열린 달 ('안내중'만 아직 안 열림)
     nj = result["sources"].get("nanji") or {}
     nanji_opened |= {f"n:{z['id']}" for z in nj.get("zones", []) if z["status"] != "안내중"}
