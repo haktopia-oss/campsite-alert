@@ -46,7 +46,7 @@
   "date": "2026-10-24",
   "cat": "bbq",
   "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
  "j:6713469:2026-10-25": {
@@ -83,13 +83,6 @@
   "name": "일반캠핑존 B형(4인용, 자갈형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901180953339326"
  },
- "n:S260901181759847800": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "camp",
-  "name": "일반캠핑존 C형(4인용, 데크형)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800"
- },
  "n:S260901182351878139": {
   "src": "nanji",
   "month": 10,
@@ -103,13 +96,6 @@
   "cat": "camp",
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901173224696584"
- },
- "n:S260901184513427044": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "bbq",
-  "name": "바비큐존(8인용, 1차:11시~16시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184513427044"
  },
  "_sources": [
   "angbong",
