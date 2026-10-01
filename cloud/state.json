@@ -1,14 +1,4 @@
 {
- "j:6630603:2026-10-09": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-10-09",
-  "cat": "bbq",
-  "name": "일반바베큐 오전(4인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630603"
- },
  "j:6630868:2026-10-05": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -68,6 +58,16 @@
   "name": "글램핑(4인/주말(금-일) 및 공휴일)",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "j:6210358:2026-10-04": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-04",
+  "cat": "camp",
+  "name": "3-1 오토캠핑사이트/바닥(파쇄석)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210358"
  },
  "n:S260901174901777245": {
   "src": "nanji",
