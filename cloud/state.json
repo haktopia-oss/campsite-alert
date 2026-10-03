@@ -89,16 +89,6 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
- "a:all:2026-10-10": {
-  "src": "angbong",
-  "place": "앵봉산가족캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec",
-  "date": "2026-10-10",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
- },
  "n:S260901174901777245": {
   "src": "nanji",
   "month": 10,
@@ -112,6 +102,13 @@
   "cat": "camp",
   "name": "일반캠핑존 B형(4인용, 자갈형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901180953339326"
+ },
+ "n:S260901181759847800": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "일반캠핑존 C형(4인용, 데크형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800"
  },
  "n:S260901182351878139": {
   "src": "nanji",
