@@ -104,13 +104,6 @@
   "name": "바비큐존(12인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184915538627"
  },
- "n:S260901184513427044": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "bbq",
-  "name": "바비큐존(8인용, 1차:11시~16시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184513427044"
- },
  "_sources": [
   "angbong",
   "choan",
