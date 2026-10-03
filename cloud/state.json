@@ -59,6 +59,16 @@
   "remain": 4,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
+ "j:5855740:2026-10-10": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-10",
+  "cat": "camp",
+  "name": "3-5 오토캠핑사이트 / 바닥(파쇄석)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855740"
+ },
  "a:all:2026-10-10": {
   "src": "angbong",
   "place": "앵봉산가족캠핑장",
@@ -97,19 +107,19 @@
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901173224696584"
  },
- "n:S260901184915538627": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "bbq",
-  "name": "바비큐존(12인용, 1차:11시~16시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184915538627"
- },
  "n:S260901184107910799": {
   "src": "nanji",
   "month": 10,
   "cat": "bbq",
   "name": "바비큐존(4인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184107910799"
+ },
+ "n:S260901185737192457": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "bbq",
+  "name": "바비큐존(8인용, 2차:17시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901185737192457"
  },
  "_sources": [
   "angbong",
