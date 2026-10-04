@@ -1,5 +1,11 @@
 [
  {
+  "at": "2026-10-04T09:30:27",
+  "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 10월 [글램핑] 글램핑존 (4인용)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
+  "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901165106276774",
+  "error": null
+ },
+ {
   "at": "2026-10-04T09:20:23",
   "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 10월 [캠핑] 일반캠핑존 C형(4인용, 데크형)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
   "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800",
@@ -291,12 +297,6 @@
   "at": "2026-10-02T19:40:20",
   "text": "🏕️ 우이동가족캠핑장 주말 빈자리!\n• 10/9(금, 한글날) [캠핑] 캠핑 사이트(전체) 1자리",
   "link": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
-  "error": null
- },
- {
-  "at": "2026-10-02T19:10:21",
-  "text": "🏕️ 앵봉산가족캠핑장 주말 빈자리!\n• 10/10(토) [캠핑] 캠핑 사이트(전체) 1자리",
-  "link": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec",
   "error": null
  }
 ]
