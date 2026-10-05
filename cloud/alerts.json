@@ -1,5 +1,11 @@
 [
  {
+  "at": "2026-10-06T03:30:36",
+  "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 10월 [글램핑] 글램핑존 (4인용)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
+  "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901165106276774",
+  "error": null
+ },
+ {
   "at": "2026-10-06T01:11:12",
   "text": "🏕️ 중랑가족캠핑장 주말 빈자리!\n• 10/17(토) [캠핑] 2-1 오토캠핑사이트/데크 1자리\n• 10/24(토) [캠핑] 2-2 오토캠핑사이트/데크 1자리\n• 10/31(토) [캠핑] [비전기] 4-1 오토캠핑사이트/ 1자리",
   "link": "https://m.booking.naver.com/booking/5/bizes/387475",
@@ -291,12 +297,6 @@
   "at": "2026-10-03T22:50:21",
   "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 10월 [캠핑] 일반캠핑존 C형(4인용, 데크형)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
   "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800",
-  "error": null
- },
- {
-  "at": "2026-10-03T22:40:23",
-  "text": "🏕️ 중랑가족캠핑장 주말 빈자리!\n• 10/17(토) [바베큐] 바베큐(단체-8인) 1자리",
-  "link": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789",
   "error": null
  }
 ]
