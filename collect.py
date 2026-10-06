@@ -22,7 +22,8 @@ DATED = [
     ("angbong", "a", lambda: xticket.collect(
         "앵봉산가족캠핑장", "a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec")),
     ("choan", "c", choan.collect),
-    ("sagimak", "s", lambda: knps.collect("북한산 사기막야영장", "B141003", "사기막", "북한산")),
+    # 사기막(knps.collect("북한산 사기막야영장", "B141003", "사기막", "북한산"), 접두어 "s")은
+    # 무공해차·도보·자전거만 입실 가능해서 당분간 제외 (2026-10-06). 다시 쓰려면 이 줄을 DATED에 되살리기.
     ("seoulpark", "p", lambda: xticket.collect(
         "서울대공원 캠핑장", "b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058")),
 ]
