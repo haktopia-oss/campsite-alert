@@ -34,7 +34,9 @@ def collect(name: str, shop_encode: str, months: int = 2) -> dict:
                    data={"play_month": ym}, headers=hdr, timeout=15).json()
         if r.get("error") or r.get("error1"):
             raise RuntimeError((r.get("error") or r.get("error1")).get("message"))
-        for x in (r.get("data") or {}).get("bookPlayDateList") or []:
+        if not isinstance(r.get("data"), dict) or "bookPlayDateList" not in r["data"]:
+            raise RuntimeError("응답 형식이 바뀜 (bookPlayDateList 없음)")
+        for x in r["data"]["bookPlayDateList"] or []:
             pd = x.get("play_date") or ""
             if len(pd) != 8:
                 continue

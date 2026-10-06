@@ -39,6 +39,8 @@ def collect(months: int = 2) -> dict:
             items[idx] = zone.strip()
             cells[(idx, ymd)] = int(n)
 
+    if not cells:
+        raise RuntimeError("달력 형식이 바뀜 (날짜 칸을 못 찾음)")
     slots = []
     for (idx, ymd), n in cells.items():
         d = date.fromisoformat(ymd)

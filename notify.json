@@ -1,4 +1,9 @@
 {
- "_설명": "알림 받을 캠핑장만 적기. jungnang=중랑, uidong=우이동, angbong=앵봉산, choan=초안산, nanji=난지. 빠진 곳도 화면에는 계속 표시됨",
- "notify": ["nanji", "angbong"]
+ "_설명": "알림 받을 캠핑장만 적기. jungnang=중랑, uidong=우이동, angbong=앵봉산, choan=초안산, nanji=난지, sagimak=사기막, gangdong=강동그린웨이, seoulpark=서울대공원. 빠진 곳도 화면에는 계속 표시됨",
+ "notify": [
+  "nanji",
+  "angbong"
+ ],
+ "token_expires": "2027-09-30",
+ "_token_설명": "cron-job.org 에 넣은 GitHub 토큰 만료일. 새로 발급하면 이 날짜도 바꾸기 (30일 전부터 텔레그램 예고)"
 }

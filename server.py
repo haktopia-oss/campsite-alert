@@ -16,7 +16,6 @@ import requests
 
 import collect
 import dashboard
-import kakao
 import monitor
 import telegram
 
@@ -83,7 +82,7 @@ def status() -> dict:
         alerts = cloud_alerts(repo)
     else:
         alerts = json.loads(monitor.ALERTS.read_text(encoding="utf-8")) if monitor.ALERTS.exists() else []
-    return dashboard.build(s, alerts, interval=INTERVAL, kakao=kakao.configured(),
+    return dashboard.build(s, alerts, interval=INTERVAL,
                            telegram=telegram.configured(), cloud=repo, **_info)
 
 

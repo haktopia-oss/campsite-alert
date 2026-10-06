@@ -5,12 +5,14 @@
 첫 실행은 기준선만 저장하고 알림을 보내지 않는다.
 """
 import json
+import os
 import sys
+from datetime import datetime
 from datetime import date
 from pathlib import Path
 
 import collect
-import kakao
+import health
 import telegram
 from collectors.common import holiday_name
 
@@ -80,12 +82,15 @@ def messages(new: dict) -> list[tuple[str, str]]:
     return msgs
 
 
-def notify_sources() -> set:
-    p = Path(__file__).parent / "notify.json"
+def _notify_cfg() -> dict:
     try:
-        return set(json.loads(p.read_text(encoding="utf-8"))["notify"])
-    except (OSError, ValueError, KeyError):
-        return set(collect.PREFIX)  # 설정 없으면 전부 알림
+        return json.loads((Path(__file__).parent / "notify.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def notify_sources() -> set:
+    return set(_notify_cfg().get("notify", collect.PREFIX))  # 설정 없으면 전부 알림
 
 
 def _log_alerts(at: str, msgs: list, err: str | None, keep: int = 50) -> None:
@@ -131,26 +136,27 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
     # 알림 받을 캠핑장만 (notify.json). 나머지도 상태는 계속 추적 → 다시 켜도 알림 폭탄 없음
     muted = {k for k, v in new.items() if v["src"] not in notify_sources()}
     msgs = [] if first else messages({k: v for k, v in new.items() if k not in muted})
-    channels = [(name, fn) for name, ok, fn in (
-        ("텔레그램", telegram.configured(), telegram.send),
-        ("카톡", kakao.configured(), kakao.send_me)) if ok]
+    # 감시 자체 점검: 고장·복구, 7일 생존 신호, 토큰 만료 예고
+    cfg = _notify_cfg()
+    sys_msgs = [] if first else health.check(
+        result, datetime.now(), len(msgs), now, cfg.get("token_expires"),
+        os.environ.get("PAGES_URL") or "https://github.com")
     errs = []
-    for text, link in msgs:
-        if dry or not channels:
+    for text, link in msgs + sys_msgs:
+        if dry or not telegram.configured():
             print("---- (미발송)\n" + text + "\n→ " + link)
             continue
-        for name, send in channels:
-            try:
-                send(text, link)
-            except Exception as e:  # 한 채널이 실패해도 나머지·기록은 계속
-                errs.append(f"{name}: {e}")
+        try:
+            telegram.send(text, link, "예약하러 가기" if (text, link) in msgs else "현황 보기")
+        except Exception as e:  # 실패해도 상태·기록은 남긴다
+            errs.append(f"텔레그램: {e}")
     sent_err = "; ".join(errs) or None
     ok_sources = seen | {s for s in result["sources"]}
     STATE.write_text(json.dumps({**now, "_sources": sorted(ok_sources),
                                  "_nanji_opened": sorted(nanji_opened)}, ensure_ascii=False, indent=1),
                      encoding="utf-8")
-    if msgs and not dry:
-        _log_alerts(result["checked_at"], msgs, sent_err)
+    if (msgs or sys_msgs) and not dry:
+        _log_alerts(result["checked_at"], msgs + sys_msgs, sent_err)
     # 수집 오류 현황 (내용이 바뀔 때만 파일이 바뀌도록 시각은 넣지 않음)
     ERRORS.write_text(json.dumps(result["errors"], ensure_ascii=False, indent=1, sort_keys=True),
                       encoding="utf-8")

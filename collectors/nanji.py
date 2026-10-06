@@ -62,6 +62,8 @@ def collect(max_pages: int = 15) -> dict:
                 "open": r["status"] in OPEN_STATES,
                 "use_period": r["use_period"], "url": DETAIL + r["id"],
             })
+    if not zones:
+        raise RuntimeError("목록에서 난지캠핑장을 못 찾음 (사이트 구조 변경 의심)")
     # 이용기간이 이미 끝난 달은 제외 ("2026.09.01 ~ 2026.09.30")
     today = date.today().strftime("%Y.%m.%d")
     zones = [z for z in zones

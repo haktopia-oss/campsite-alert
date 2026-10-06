@@ -29,6 +29,8 @@ def collect(name: str, business_id: int, today: date | None = None, horizon_days
     api, book = API.format(business_id), BOOK_URL.format(business_id)
     s = session()
     items = s.get(f"{api}/biz-items", params={"lang": "ko"}, timeout=15).json()
+    if not isinstance(items, list) or not items:
+        raise RuntimeError(f"상품 목록을 못 받음: {str(items)[:80]}")
 
     start = datetime.combine(today, datetime.min.time())
     end = start + timedelta(days=horizon_days, hours=23, minutes=59, seconds=59)
