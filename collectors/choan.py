@@ -32,15 +32,19 @@ def collect(months: int = 2) -> dict:
     s.get(MAIN, timeout=15)
 
     items, cells = {}, {}
+    seen = ""
     for ym in _months(today, months):
-        html = s.get(CAL, params={"vwYm": ym, "s_idx": "", "stk_idx": ""},
-                     headers={"Referer": MAIN}, timeout=15).text
+        resp = s.get(CAL, params={"vwYm": ym, "s_idx": "", "stk_idx": ""},
+                     headers={"Referer": MAIN}, timeout=15)
+        html = resp.text
+        title = re.search(r"<title>([^<]*)", html)
+        seen = f"HTTP {resp.status_code}, {len(html)}자, 제목 '{title.group(1).strip() if title else '-'}'"
         for ymd, idx, zone, n in _CELL.findall(html):  # 달력이 2개라 중복 → dict로 제거
             items[idx] = zone.strip()
             cells[(idx, ymd)] = int(n)
 
     if not cells:
-        raise RuntimeError("달력 형식이 바뀜 (날짜 칸을 못 찾음)")
+        raise RuntimeError(f"달력 형식이 바뀜 (날짜 칸을 못 찾음; {seen})")
     slots = []
     for (idx, ymd), n in cells.items():
         d = date.fromisoformat(ymd)
