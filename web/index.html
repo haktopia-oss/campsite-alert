@@ -195,8 +195,11 @@ function renderBoard(){
     const name = src === "nanji" ? "난지캠핑장" : j.name;
     cols.push({src, name, url: j.url, rows});
   }
-  const LOCAL_NAMES = {choan: "초안산캠핑장"};
-  for (const src of (data.local_only || [])) cols.push({src, name: LOCAL_NAMES[src] || src, url: "#", rows: [], localOnly: true});
+  const LOCAL = {choan: ["초안산캠핑장", "https://nowonsc.moonhwain.kr:447/rsvc/rsv_srm.html?b_id=nowonsc"]};
+  for (const src of (data.local_only || [])) {
+    const [name, url] = LOCAL[src] || [src, "#"];
+    cols.push({src, name, url, rows: [], localOnly: true});
+  }
   const live = cols.filter(c => c.rows.length), full = cols.filter(c => !c.rows.length);
   const html = live.map(c => `<div class="col">
       <div class="col-h"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a>
