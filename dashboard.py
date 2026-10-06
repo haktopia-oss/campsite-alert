@@ -35,6 +35,7 @@ def build(status: dict, alerts: list, **extra) -> dict:
             d = date.fromisoformat(sl["date"])
             days[sl["date"]] = {"wd": d.weekday(), "holiday": holiday_name(d)}
     return {**status, "days": days, "dated": [k for k, _, _ in collect.DATED],
+            "notify": sorted(monitor.notify_sources()),
             "alerts": alerts[:20], **extra}
 
 

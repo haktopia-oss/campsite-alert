@@ -80,6 +80,14 @@ def messages(new: dict) -> list[tuple[str, str]]:
     return msgs
 
 
+def notify_sources() -> set:
+    p = Path(__file__).parent / "notify.json"
+    try:
+        return set(json.loads(p.read_text(encoding="utf-8"))["notify"])
+    except (OSError, ValueError, KeyError):
+        return set(collect.PREFIX)  # 설정 없으면 전부 알림
+
+
 def _log_alerts(at: str, msgs: list, err: str | None, keep: int = 50) -> None:
     log = json.loads(ALERTS.read_text(encoding="utf-8")) if ALERTS.exists() else []
     for text, link in msgs:
@@ -120,7 +128,9 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
     # 접수중·예약마감·접수종료 = 이미 한 번 열린 달 ('안내중'만 아직 안 열림)
     nj = result["sources"].get("nanji") or {}
     nanji_opened |= {f"n:{z['id']}" for z in nj.get("zones", []) if z["status"] != "안내중"}
-    msgs = [] if first else messages(new)
+    # 알림 받을 캠핑장만 (notify.json). 나머지도 상태는 계속 추적 → 다시 켜도 알림 폭탄 없음
+    muted = {k for k, v in new.items() if v["src"] not in notify_sources()}
+    msgs = [] if first else messages({k: v for k, v in new.items() if k not in muted})
     channels = [(name, fn) for name, ok, fn in (
         ("텔레그램", telegram.configured(), telegram.send),
         ("카톡", kakao.configured(), kakao.send_me)) if ok]
@@ -145,7 +155,7 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
     ERRORS.write_text(json.dumps(result["errors"], ensure_ascii=False, indent=1, sort_keys=True),
                       encoding="utf-8")
 
-    print(f"[{result['checked_at']}] 가능 {len(now)}건, 새로 생김 {len(new)}건"
+    print(f"[{result['checked_at']}] 가능 {len(now)}건, 새로 생김 {len(new)}건(알림끔 {len(muted)})"
           + (" (첫 실행: 기준선 저장, 알림 없음)" if first else f", 알림 {len(msgs)}건")
           + (f", 오류 {result['errors']}" if result["errors"] else ""))
     return msgs

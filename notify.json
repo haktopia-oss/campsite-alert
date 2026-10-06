@@ -1,0 +1,4 @@
+{
+ "_설명": "알림 받을 캠핑장만 적기. jungnang=중랑, uidong=우이동, angbong=앵봉산, choan=초안산, nanji=난지. 빠진 곳도 화면에는 계속 표시됨",
+ "notify": ["nanji", "angbong"]
+}

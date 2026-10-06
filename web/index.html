@@ -76,7 +76,7 @@ td a{color:var(--ink)}
   <div id="dated"></div>
 
   <section>
-    <h2>난지캠핑장</h2>
+    <h2>난지캠핑장 <span id="njBell"></span></h2>
     <p class="note">서울시 공공예약 존별 상태. '접수중'이면 그 달 어딘가에 자리가 있다는 뜻 — 주말 여부는 링크에서 확인.</p>
     <div id="nj"></div>
   </section>
@@ -165,9 +165,14 @@ function renderDatedSource(src){
       <div class="d">${m}/${d} (${WD[meta.wd]})${meta.holiday ? `<span class="hol">${esc(meta.holiday)}</span>` : ""}</div>
       ${badge}${byCat ? ` <span class="meta">${byCat}</span>` : ""}${detail}</div>`;
   }).join("");
-  return `<section><h2><a href="${esc(j.url)}" target="_blank" rel="noopener" style="color:inherit">${esc(j.name)}</a></h2>
+  return `<section><h2><a href="${esc(j.url)}" target="_blank" rel="noopener" style="color:inherit">${esc(j.name)}</a> ${bell(src)}</h2>
     <p class="note">${NOTES[src] || ""}</p>
     <div class="grid">${html || `<div class="empty">조건에 맞는 주말 날짜가 없어요</div>`}</div></section>`;
+}
+
+function bell(src){
+  if (!data.notify) return "";
+  return data.notify.includes(src) ? `<span class="badge b-ok">🔔 알림</span>` : `<span class="badge b-no">🔕 알림 꺼짐</span>`;
 }
 
 function renderDated(){
@@ -175,6 +180,7 @@ function renderDated(){
 }
 
 function renderNanji(){
+  $("#njBell").innerHTML = bell("nanji");
   const n = data.sources?.nanji;
   if (!n){ $("#nj").innerHTML = `<div class="empty">데이터 없음</div>`; return; }
   const rows = n.zones.filter(z => cats.has(z.cat) && (!onlyOk || z.open)).map(z =>
