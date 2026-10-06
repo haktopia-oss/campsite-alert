@@ -1,12 +1,14 @@
-"""중랑가족캠핑장 — 네이버예약 공개 API에서 사이트별·날짜별 잔여 조회."""
+"""네이버예약 캠핑장 — 공개 API에서 상품(사이트)별·날짜별 잔여 조회.
+
+중랑가족캠핑장, 북한산 진관글램핑장, 북한산 둘레캠프 등.
+"""
 import re
 from datetime import date, datetime, timedelta
 
 from .common import categorize, session, wanted
 
-BUSINESS_ID = 387475
-API = f"https://api.booking.naver.com/v3.0/businesses/{BUSINESS_ID}"
-BOOK_URL = f"https://m.booking.naver.com/booking/5/bizes/{BUSINESS_ID}"
+API = "https://api.booking.naver.com/v3.0/businesses/{}"
+BOOK_URL = "https://m.booking.naver.com/booking/5/bizes/{}"  # 업종 번호가 달라도 네이버가 맞는 곳으로 넘겨줌
 
 
 def _clean_name(name: str) -> str:
@@ -22,10 +24,11 @@ def _window_end(item: dict, today: date) -> date:
     return today + timedelta(days=60)
 
 
-def collect(today: date | None = None, horizon_days: int = 45) -> dict:
+def collect(name: str, business_id: int, today: date | None = None, horizon_days: int = 45) -> dict:
     today = today or date.today()
+    api, book = API.format(business_id), BOOK_URL.format(business_id)
     s = session()
-    items = s.get(f"{API}/biz-items", params={"lang": "ko"}, timeout=15).json()
+    items = s.get(f"{api}/biz-items", params={"lang": "ko"}, timeout=15).json()
 
     start = datetime.combine(today, datetime.min.time())
     end = start + timedelta(days=horizon_days, hours=23, minutes=59, seconds=59)
@@ -36,13 +39,13 @@ def collect(today: date | None = None, horizon_days: int = 45) -> dict:
             continue
         iid = it["bizItemId"]
         cat = categorize(it["name"])
-        name = _clean_name(it["name"])
+        item_name = _clean_name(it["name"])
         win_end = _window_end(it, today)
         paused = bool((it.get("bookableSettingJson") or {}).get("isPaused"))
-        out_items.append({"id": iid, "name": name, "cat": cat,
-                          "url": f"{BOOK_URL}/items/{iid}"})
+        out_items.append({"id": iid, "name": item_name, "cat": cat,
+                          "url": f"{book}/items/{iid}"})
 
-        sched = s.get(f"{API}/biz-items/{iid}/daily-schedules", timeout=15, params={
+        sched = s.get(f"{api}/biz-items/{iid}/daily-schedules", timeout=15, params={
             "startDateTime": start.strftime("%Y-%m-%dT%H:%M:%S"),
             "endDateTime": end.strftime("%Y-%m-%dT%H:%M:%S"),
         }).json()
@@ -61,5 +64,5 @@ def collect(today: date | None = None, horizon_days: int = 45) -> dict:
                 "open": (d <= win_end) and not paused,  # 예약창 열린 날짜인지
             })
 
-    return {"name": "중랑가족캠핑장", "url": BOOK_URL,
+    return {"name": name, "url": book,
             "items": out_items, "slots": slots}

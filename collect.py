@@ -5,7 +5,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from collectors import choan, jungnang, nanji, xticket
+from collectors import choan, knps, nanji, naver, xticket
 from collectors.common import holiday_name
 
 ROOT = Path(__file__).parent
@@ -16,12 +16,15 @@ WD = "월화수목금토일"
 
 # (키, 상태키 접두어, 수집함수) — 날짜별 빈자리 소스. 접두어는 state.json 호환 위해 고정.
 DATED = [
-    ("jungnang", "j", jungnang.collect),
+    ("jungnang", "j", lambda: naver.collect("중랑가족캠핑장", 387475)),
     ("uidong", "u", lambda: xticket.collect(
         "우이동가족캠핑장", "13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f")),
     ("angbong", "a", lambda: xticket.collect(
         "앵봉산가족캠핑장", "a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec")),
     ("choan", "c", choan.collect),
+    ("jingwan", "g", lambda: naver.collect("북한산 진관글램핑장", 1543795)),
+    ("dulle", "d", lambda: naver.collect("북한산 둘레캠프", 841086)),
+    ("sagimak", "s", lambda: knps.collect("북한산 사기막야영장", "B141003", "사기막", "북한산")),
 ]
 PREFIX = {k: p for k, p, _ in DATED} | {"nanji": "n"}
 

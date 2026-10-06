@@ -13,7 +13,7 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}
-.wrap{max-width:880px;margin:0 auto;padding:20px 16px 60px}
+.wrap{max-width:1500px;margin:0 auto;padding:20px 16px 60px}
 header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-bottom:14px}
 h1{font-size:22px;margin:0;flex:1 1 auto}
 .meta{color:var(--sub);font-size:13px}
@@ -52,6 +52,32 @@ td a{color:var(--ink)}
 .alert:first-child{border-top:0}
 .alert .t{color:var(--sub);font-size:12px}
 .empty{color:var(--sub);padding:14px;text-align:center}
+.board{display:flex;align-items:stretch;gap:0;overflow-x:auto;border:2px solid #1f3a4a;border-radius:6px;
+  scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;min-height:420px}
+.col{flex:1 0 200px;max-width:280px;border-right:2px solid #1f3a4a;display:flex;flex-direction:column;scroll-snap-align:start}
+.col:last-child{border-right:0}
+.col-h{padding:12px 12px 8px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.col-h a{color:var(--ink);text-decoration:none;font-weight:700;font-size:16px;line-height:1.3}
+.col-h .sub{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.col-b{padding:10px;display:flex;flex-direction:column;gap:10px}
+.col .day{padding:10px 12px}
+.col .day .d{font-size:15px}
+.zone{display:flex;gap:6px;align-items:baseline;font-size:13px;padding:7px 4px;border-bottom:1px solid var(--line)}
+.zone .m{color:var(--sub);font-size:12px;white-space:nowrap}
+.zone .cat{white-space:nowrap}
+.zone a{color:var(--ink)}
+.col.mini{flex:0 0 46px;max-width:46px;background:#f7f7f6}
+.col.mini .col-h{padding:10px 4px;border:0;background:transparent;text-align:center}
+.col.mini a{writing-mode:vertical-rl;text-orientation:upright;font-size:13px;font-weight:600;color:var(--no);letter-spacing:1px}
+.col.mini .full{display:block;margin-top:8px;font-size:11px;color:var(--no)}
+.hint{color:var(--sub);font-size:12px;margin:6px 0}
+@media (max-width:600px){
+  .col{flex:0 0 158px}
+  .col-b{padding:8px}
+  .col .day{padding:8px 9px}
+  .col-h a{font-size:15px}
+  .zone{flex-wrap:wrap}
+}
 .err{color:#b45309;font-size:13px}
 </style>
 </head>
@@ -66,20 +92,13 @@ td a{color:var(--ink)}
   <div class="chips" id="chips">
     <button class="chip" data-cat="camp">캠핑</button>
     <button class="chip" data-cat="glamp">글램핑</button>
-    <button class="chip" data-cat="bbq">바베큐</button>
-    <span style="flex:1"></span>
-    <button class="chip" id="onlyOk">빈자리 있는 날만</button>
+    <button class="chip" data-cat="bbq">바베큐·당일</button>
   </div>
   <div class="err" id="errors"></div>
 
-  <p class="note">캠핑·글램핑: 다음 날도 쉬는 밤만 (토요일 밤, 월요일이 공휴일인 일요일 밤, 공휴일 금요일 밤 등) · 바베큐: 토·일·연휴 공휴일.</p>
-  <div id="dated"></div>
-
-  <section>
-    <h2>난지캠핑장 <span id="njBell"></span></h2>
-    <p class="note">서울시 공공예약 존별 상태. '접수중'이면 그 달 어딘가에 자리가 있다는 뜻 — 주말 여부는 링크에서 확인.</p>
-    <div id="nj"></div>
-  </section>
+  <p class="note">빈자리가 있는 날만 보여요. 캠핑·글램핑: 다음 날도 쉬는 밤 (토요일 밤, 월요일 공휴일 전 일요일 밤, 공휴일 금요일 밤) · 바베큐·당일: 토·일·연휴 공휴일. 전부 만석인 곳은 오른쪽에 이름만 작게.</p>
+  <div class="hint" id="hint">← 옆으로 넘겨서 다른 캠핑장 보기</div>
+  <div class="board" id="board"></div>
 
   <section>
     <h2>최근 알림</h2>
@@ -88,14 +107,13 @@ td a{color:var(--ink)}
 </div>
 
 <script>
-const CAT = {camp:"캠핑", glamp:"글램핑", bbq:"바베큐"};
+const CAT = {camp:"캠핑", glamp:"글램핑", bbq:"당일"};
 const WD = "월화수목금토일";
 const store = {
   get(k, d){ try{ const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v) }catch{ return d } },
   set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)) }catch{} }
 };
 let cats = new Set(store.get("cats", ["camp","glamp","bbq"]));
-let onlyOk = store.get("onlyOk", false);
 let open = new Set();
 let data = null;
 
@@ -105,7 +123,6 @@ const hm = iso => iso ? iso.slice(11,16) : "-";
 
 function renderChips(){
   document.querySelectorAll(".chip[data-cat]").forEach(b => b.classList.toggle("on", cats.has(b.dataset.cat)));
-  $("#onlyOk").classList.toggle("on", onlyOk);
 }
 
 function renderMeta(){
@@ -115,7 +132,7 @@ function renderMeta(){
     `마지막 확인 ${data.checked_at ? data.checked_at.slice(5,10).replace("-","/") + " " + hm(data.checked_at) : "-"}` +
     (data.next_check ? ` · 다음 ${hm(data.next_check)}` : "") + " · " +
     (data.cloud ? `알림: ☁️ 클라우드(10분)` : `텔레그램 ${data.telegram ? "✓" : "✗"} · 카톡 ${data.kakao ? "✓" : "✗"}`);
-  const NAMES = {jungnang:"중랑", uidong:"우이동", angbong:"앵봉산", choan:"초안산", nanji:"난지"};
+  const NAMES = {jungnang:"중랑", uidong:"우이동", angbong:"앵봉산", choan:"초안산", nanji:"난지", jingwan:"진관글램핑", dulle:"둘레캠프", sagimak:"사기막"};
   const errs = Object.keys(data.errors||{}).map(k => {
     const st = data.sources?.[k]?.stale_at;
     return `⚠️ ${NAMES[k] || k}: 일시적 접속 실패` + (st ? ` — ${st.slice(5,10).replace("-","/")} ${hm(st)} 기준 데이터 표시 중` : "");
@@ -124,70 +141,64 @@ function renderMeta(){
   $("#errors").textContent = errs.join(" / ");
 }
 
-const NOTES = {
-  jungnang: "네이버예약 · 오늘부터 30일까지만 열려요.",
-  uidong: "xticket · 사이트 전체 합계 · 매월 10일 다음 달 오픈.",
-  angbong: "xticket · 사이트 전체 합계 · 매월 10일 다음 달 오픈.",
-  choan: "노원구시설관리공단 · 구역별 잔여 · 매월 9일 다음 달 오픈. (피크닉장=당일, 캐빈=글램핑으로 분류)",
-};
+const ORDER = ["jungnang", "nanji", "uidong", "angbong", "choan", "jingwan", "dulle", "sagimak"];
 
-function renderDatedSource(src){
-  const j = data.sources?.[src];
-  if (!j) return `<section><h2>${esc(src)}</h2><div class="empty">데이터 없음</div></section>`;
+function bell(src){
+  if (!data.notify) return "";
+  return data.notify.includes(src) ? `<span class="badge b-ok">🔔 알림</span>` : `<span class="badge b-no">🔕</span>`;
+}
+
+function datedCards(src, j){
   const items = Object.fromEntries(j.items.map(i => [i.id, i]));
   const byDate = {};
   for (const s of j.slots){
     const it = items[s.item];
-    if (!it || !cats.has(it.cat)) continue;
+    if (!it || !cats.has(it.cat) || !s.open || s.remain <= 0) continue;
     (byDate[s.date] ??= []).push({...s, it});
   }
-  const html = Object.keys(byDate).sort().map(ymd => {
-    const list = byDate[ymd];
-    const isOpen = list.some(s => s.open);
-    const avail = list.filter(s => s.open && s.remain > 0);
+  return Object.keys(byDate).sort().map(ymd => {
+    const avail = byDate[ymd];
     const total = avail.reduce((a,s) => a + s.remain, 0);
-    if (onlyOk && !avail.length) return "";
     const meta = data.days[ymd] || {};
     const [, m, d] = ymd.split("-").map(Number);
-    const cls = avail.length ? "ok" : (isOpen ? "full" : "closed");
-    const badge = avail.length
-      ? `<span class="badge b-ok">빈자리 ${total}</span>`
-      : isOpen ? `<span class="badge b-no">만석</span>` : `<span class="badge b-wait">예약 오픈 전</span>`;
     const byCat = Object.keys(CAT).filter(c => cats.has(c)).map(c => {
       const n = avail.filter(s => s.it.cat === c).reduce((a,s)=>a+s.remain,0);
       return n ? `${CAT[c]} ${n}` : "";
     }).filter(Boolean).join(" · ");
     const key = src + "|" + ymd;
-    const detail = open.has(key) && avail.length ? `<ul>${avail.sort((a,b)=>a.it.cat.localeCompare(b.it.cat)).map(s =>
+    const detail = open.has(key) ? `<ul>${avail.sort((a,b)=>a.it.cat.localeCompare(b.it.cat)).map(s =>
       `<li><a href="${esc(s.it.url)}" target="_blank" rel="noopener"><span class="cat">${CAT[s.it.cat]}</span>${esc(s.it.name)}</a><span class="r">${s.remain}</span></li>`
     ).join("")}</ul>` : "";
-    return `<div class="day ${cls}" data-key="${esc(key)}">
+    return `<div class="day ok" data-key="${esc(key)}">
       <div class="d">${m}/${d} (${WD[meta.wd]})${meta.holiday ? `<span class="hol">${esc(meta.holiday)}</span>` : ""}</div>
-      ${badge}${byCat ? ` <span class="meta">${byCat}</span>` : ""}${detail}</div>`;
-  }).join("");
-  return `<section><h2><a href="${esc(j.url)}" target="_blank" rel="noopener" style="color:inherit">${esc(j.name)}</a> ${bell(src)}</h2>
-    <p class="note">${NOTES[src] || ""}</p>
-    <div class="grid">${html || `<div class="empty">조건에 맞는 주말 날짜가 없어요</div>`}</div></section>`;
+      <span class="badge b-ok">빈자리 ${total}</span> <span class="meta">${byCat}</span>${detail}</div>`;
+  });
 }
 
-function bell(src){
-  if (!data.notify) return "";
-  return data.notify.includes(src) ? `<span class="badge b-ok">🔔 알림</span>` : `<span class="badge b-no">🔕 알림 꺼짐</span>`;
+function nanjiRows(n){
+  return n.zones.filter(z => z.open && cats.has(z.cat)).map(z =>
+    `<div class="zone"><span class="m">${z.month ?? ""}월</span><span class="cat">${CAT[z.cat]}</span>
+      <a href="${esc(z.url)}" target="_blank" rel="noopener">${esc(z.zone)}</a></div>`);
 }
 
-function renderDated(){
-  $("#dated").innerHTML = (data.dated || ["jungnang"]).map(renderDatedSource).join("");
-}
-
-function renderNanji(){
-  $("#njBell").innerHTML = bell("nanji");
-  const n = data.sources?.nanji;
-  if (!n){ $("#nj").innerHTML = `<div class="empty">데이터 없음</div>`; return; }
-  const rows = n.zones.filter(z => cats.has(z.cat) && (!onlyOk || z.open)).map(z =>
-    `<tr><td class="month">${z.month ?? ""}월</td>
-      <td><span class="cat">${CAT[z.cat]}</span><a href="${esc(z.url)}" target="_blank" rel="noopener">${esc(z.zone)}</a></td>
-      <td style="text-align:right"><span class="badge ${z.open ? "b-ok" : "b-no"}">${esc(z.status)}</span></td></tr>`).join("");
-  $("#nj").innerHTML = rows ? `<table>${rows}</table>` : `<div class="empty">조건에 맞는 항목이 없어요</div>`;
+function renderBoard(){
+  const cols = [];
+  for (const src of ORDER){
+    const j = data.sources?.[src];
+    if (!j) continue;
+    const rows = src === "nanji" ? nanjiRows(j) : datedCards(src, j);
+    const name = src === "nanji" ? "난지캠핑장" : j.name;
+    cols.push({src, name, url: j.url, rows});
+  }
+  const live = cols.filter(c => c.rows.length), full = cols.filter(c => !c.rows.length);
+  const html = live.map(c => `<div class="col">
+      <div class="col-h"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a>
+        <div class="sub">${bell(c.src)}${c.src === "nanji" ? `<span class="meta">접수중 존 · 날짜는 링크에서</span>` : `<span class="meta">${c.rows.length}일</span>`}</div></div>
+      <div class="col-b">${c.rows.join("")}</div></div>`).join("")
+    + full.map(c => `<div class="col mini" title="${esc(c.name)} — 전부 만석">
+      <div class="col-h"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name.replace(/가족|캠핑장|야영장|북한산 /g,"").trim() || c.name)}</a><span class="full">만석</span></div></div>`).join("");
+  $("#board").innerHTML = html || `<div class="empty">데이터 없음</div>`;
+  const b = $("#board"); $("#hint").style.display = b.scrollWidth > b.clientWidth + 4 ? "" : "none";
 }
 
 function renderAlerts(){
@@ -197,7 +208,7 @@ function renderAlerts(){
   ).join("") : `<div class="empty">아직 보낸 알림이 없어요</div>`;
 }
 
-function render(){ if (!data) return; renderChips(); renderMeta(); renderDated(); renderNanji(); renderAlerts(); }
+function render(){ if (!data) return; renderChips(); renderMeta(); renderBoard(); renderAlerts(); }
 
 let STATIC = false;
 async function load(){
@@ -217,8 +228,7 @@ document.querySelectorAll(".chip[data-cat]").forEach(b => b.onclick = () => {
   cats.has(c) ? cats.delete(c) : cats.add(c);
   store.set("cats", [...cats]); render();
 });
-$("#onlyOk").onclick = () => { onlyOk = !onlyOk; store.set("onlyOk", onlyOk); render(); };
-$("#dated").onclick = e => {
+$("#board").onclick = e => {
   const card = e.target.closest(".day"); if (!card || e.target.closest("a")) return;
   const k = card.dataset.key; open.has(k) ? open.delete(k) : open.add(k); render();
 };

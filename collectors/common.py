@@ -69,9 +69,9 @@ def wanted(d: date, cat: str) -> bool:
 
 
 def categorize(name: str) -> str:
-    """상품명 → camp / glamp / bbq."""
+    """상품명 → camp / glamp / bbq(바베큐·당일 이용)."""
+    if any(k in name for k in ("바베큐", "바비큐", "캠프파이어", "캠프닉", "당일", "시간")):
+        return "bbq"
     if "글램핑" in name:
         return "glamp"
-    if "바베큐" in name or "바비큐" in name or "캠프파이어" in name:
-        return "bbq"
     return "camp"
