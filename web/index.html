@@ -132,7 +132,7 @@ function renderMeta(){
     `마지막 확인 ${data.checked_at ? data.checked_at.slice(5,10).replace("-","/") + " " + hm(data.checked_at) : "-"}` +
     (data.next_check ? ` · 다음 ${hm(data.next_check)}` : "") + " · " +
     (data.cloud ? `알림: ☁️ 클라우드(10분)` : `텔레그램 ${data.telegram ? "✓" : "✗"} · 카톡 ${data.kakao ? "✓" : "✗"}`);
-  const NAMES = {jungnang:"중랑", uidong:"우이동", angbong:"앵봉산", choan:"초안산", nanji:"난지", jingwan:"진관글램핑", dulle:"둘레캠프", sagimak:"사기막"};
+  const NAMES = {jungnang:"중랑", uidong:"우이동", angbong:"앵봉산", choan:"초안산", nanji:"난지", jingwan:"진관글램핑", dulle:"둘레캠프", sagimak:"사기막", gangdong:"강동그린웨이", seoulpark:"서울대공원"};
   const errs = Object.keys(data.errors||{}).map(k => {
     const st = data.sources?.[k]?.stale_at;
     return `⚠️ ${NAMES[k] || k}: 일시적 접속 실패` + (st ? ` — ${st.slice(5,10).replace("-","/")} ${hm(st)} 기준 데이터 표시 중` : "");
@@ -141,7 +141,7 @@ function renderMeta(){
   $("#errors").textContent = errs.join(" / ");
 }
 
-const ORDER = ["jungnang", "nanji", "uidong", "angbong", "choan", "sagimak"];
+const ORDER = ["jungnang", "nanji", "uidong", "angbong", "choan", "sagimak", "gangdong", "seoulpark"];
 
 function bell(src){
   if (!data.notify) return "";
