@@ -22,7 +22,6 @@ DATED = [
     ("angbong", "a", lambda: xticket.collect(
         "앵봉산가족캠핑장", "a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec")),
     ("choan", "c", choan.collect),
-    ("jingwan", "g", lambda: naver.collect("북한산 진관글램핑장", 1543795)),
     ("dulle", "d", lambda: naver.collect("북한산 둘레캠프", 841086)),
     ("sagimak", "s", lambda: knps.collect("북한산 사기막야영장", "B141003", "사기막", "북한산")),
 ]
