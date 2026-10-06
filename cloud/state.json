@@ -9,26 +9,6 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630868"
  },
- "j:6630868:2026-10-10": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-10-10",
-  "cat": "bbq",
-  "name": "일반바베큐 오후(4인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630868"
- },
- "j:6630868:2026-10-24": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-10-24",
-  "cat": "bbq",
-  "name": "일반바베큐 오후(4인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630868"
- },
  "j:6630650:2026-10-11": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -109,6 +89,116 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210382"
  },
+ "g:7219774:2026-10-31": {
+  "src": "jingwan",
+  "place": "북한산 진관글램핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/1543795",
+  "date": "2026-10-31",
+  "cat": "glamp",
+  "name": "진관글램핑 3호실(일반실)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/1543795/items/7219774"
+ },
+ "g:7219799:2026-10-24": {
+  "src": "jingwan",
+  "place": "북한산 진관글램핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/1543795",
+  "date": "2026-10-24",
+  "cat": "glamp",
+  "name": "진관글램핑 4호실(일반실)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/1543795/items/7219799"
+ },
+ "g:7219799:2026-10-31": {
+  "src": "jingwan",
+  "place": "북한산 진관글램핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/1543795",
+  "date": "2026-10-31",
+  "cat": "glamp",
+  "name": "진관글램핑 4호실(일반실)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/1543795/items/7219799"
+ },
+ "d:4861690:2026-10-09": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-09",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 5,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-10": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-10",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 24,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-11": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-11",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 26,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-17": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-17",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 24,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-18": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-18",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 34,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-24": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-24",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 26,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-25": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-25",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 30,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
+ "d:4861690:2026-10-31": {
+  "src": "dulle",
+  "place": "북한산 둘레캠프",
+  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+  "date": "2026-10-31",
+  "cat": "bbq",
+  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
+  "remain": 25,
+  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+ },
  "n:S260901174901777245": {
   "src": "nanji",
   "month": 10,
@@ -168,8 +258,11 @@
  "_sources": [
   "angbong",
   "choan",
+  "dulle",
+  "jingwan",
   "jungnang",
   "nanji",
+  "sagimak",
   "uidong"
  ],
  "_nanji_opened": [
