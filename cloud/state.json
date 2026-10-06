@@ -1,4 +1,14 @@
 {
+ "j:6630868:2026-10-24": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-10-24",
+  "cat": "bbq",
+  "name": "일반바베큐 오후(4인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630868"
+ },
  "j:6630650:2026-10-11": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -69,115 +79,105 @@
   "remain": 4,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
- "g:7219774:2026-10-31": {
-  "src": "jingwan",
-  "place": "북한산 진관글램핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/1543795",
-  "date": "2026-10-31",
-  "cat": "glamp",
-  "name": "진관글램핑 3호실(일반실)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/1543795/items/7219774"
- },
- "g:7219799:2026-10-24": {
-  "src": "jingwan",
-  "place": "북한산 진관글램핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/1543795",
-  "date": "2026-10-24",
-  "cat": "glamp",
-  "name": "진관글램핑 4호실(일반실)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/1543795/items/7219799"
- },
- "g:7219799:2026-10-31": {
-  "src": "jingwan",
-  "place": "북한산 진관글램핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/1543795",
-  "date": "2026-10-31",
-  "cat": "glamp",
-  "name": "진관글램핑 4호실(일반실)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/1543795/items/7219799"
- },
- "d:4861690:2026-10-09": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+ "k:all:2026-10-09": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
   "date": "2026-10-09",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 5,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
  },
- "d:4861690:2026-10-10": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+ "k:all:2026-10-10": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
   "date": "2026-10-10",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 24,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 3,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
  },
- "d:4861690:2026-10-11": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
-  "date": "2026-10-11",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 26,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
- },
- "d:4861690:2026-10-17": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+ "k:all:2026-10-17": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
   "date": "2026-10-17",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 24,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
  },
- "d:4861690:2026-10-18": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
-  "date": "2026-10-18",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 34,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
- },
- "d:4861690:2026-10-24": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+ "k:all:2026-10-24": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
   "date": "2026-10-24",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 26,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
  },
- "d:4861690:2026-10-25": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
-  "date": "2026-10-25",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 30,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
- },
- "d:4861690:2026-10-31": {
-  "src": "dulle",
-  "place": "북한산 둘레캠프",
-  "home": "https://m.booking.naver.com/booking/5/bizes/841086",
+ "k:all:2026-10-31": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
   "date": "2026-10-31",
-  "cat": "bbq",
-  "name": "둘레캠프 텐트(3시간 바베큐 예약 보증금)",
-  "remain": 25,
-  "url": "https://m.booking.naver.com/booking/5/bizes/841086/items/4861690"
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 3,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
+ },
+ "k:all:2026-11-07": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
+ },
+ "k:all:2026-11-14": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
+  "date": "2026-11-14",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
+ },
+ "k:all:2026-11-21": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
+  "date": "2026-11-21",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
+ },
+ "k:all:2026-11-28": {
+  "src": "gangdong",
+  "place": "강동그린웨이 가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0",
+  "date": "2026-11-28",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0"
+ },
+ "p:all:2026-10-31": {
+  "src": "seoulpark",
+  "place": "서울대공원 캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
+  "date": "2026-10-31",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
  },
  "n:S260901174901777245": {
   "src": "nanji",
@@ -214,13 +214,6 @@
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901173224696584"
  },
- "n:S260901184915538627": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "bbq",
-  "name": "바비큐존(12인용, 1차:11시~16시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184915538627"
- },
  "n:S260901184107910799": {
   "src": "nanji",
   "month": 10,
@@ -232,10 +225,12 @@
   "angbong",
   "choan",
   "dulle",
+  "gangdong",
   "jingwan",
   "jungnang",
   "nanji",
   "sagimak",
+  "seoulpark",
   "uidong"
  ],
  "_nanji_opened": [
