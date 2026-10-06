@@ -23,8 +23,6 @@ DATED = [
         "앵봉산가족캠핑장", "a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec")),
     ("choan", "c", choan.collect),
     ("sagimak", "s", lambda: knps.collect("북한산 사기막야영장", "B141003", "사기막", "북한산")),
-    ("gangdong", "k", lambda: xticket.collect(
-        "강동그린웨이 가족캠핑장", "5f9422e223671b122a7f2c94f4e15c6f71cd1a49141314cf19adccb98162b5b0")),
     ("seoulpark", "p", lambda: xticket.collect(
         "서울대공원 캠핑장", "b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058")),
 ]
