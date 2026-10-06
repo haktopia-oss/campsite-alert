@@ -36,6 +36,7 @@ def build(status: dict, alerts: list, **extra) -> dict:
             days[sl["date"]] = {"wd": d.weekday(), "holiday": holiday_name(d)}
     return {**status, "days": days, "dated": [k for k, _, _ in collect.DATED],
             "notify": sorted(monitor.notify_sources()),
+            "local_only": sorted(collect.LOCAL_ONLY) if collect.IN_CLOUD else [],
             "alerts": alerts[:20], **extra}
 
 

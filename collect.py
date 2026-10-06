@@ -29,12 +29,17 @@ DATED = [
         "서울대공원 캠핑장", "b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058")),
 ]
 PREFIX = {k: p for k, p, _ in DATED} | {"nanji": "n"}
+# 해외(GitHub) 서버 접속을 막는 사이트 → 클라우드에서는 건너뛰고 PC 화면에서만 표시
+LOCAL_ONLY = {"choan"}  # 초안산: 해외 IP에 81자 빈 페이지 응답 (2026-10-06 확인)
+IN_CLOUD = bool(os.environ.get("GITHUB_ACTIONS"))
 
 
 def run() -> dict:
     result = {"checked_at": datetime.now().isoformat(timespec="seconds"),
               "sources": {}, "errors": {}}
     for key, fn in [(k, f) for k, _, f in DATED] + [("nanji", nanji.collect)]:
+        if IN_CLOUD and key in LOCAL_ONLY:
+            continue
         try:
             result["sources"][key] = fn()
         except Exception as e:  # 한 곳이 실패해도 다른 곳은 계속

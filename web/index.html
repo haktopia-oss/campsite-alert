@@ -195,13 +195,15 @@ function renderBoard(){
     const name = src === "nanji" ? "난지캠핑장" : j.name;
     cols.push({src, name, url: j.url, rows});
   }
+  const LOCAL_NAMES = {choan: "초안산캠핑장"};
+  for (const src of (data.local_only || [])) cols.push({src, name: LOCAL_NAMES[src] || src, url: "#", rows: [], localOnly: true});
   const live = cols.filter(c => c.rows.length), full = cols.filter(c => !c.rows.length);
   const html = live.map(c => `<div class="col">
       <div class="col-h"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a>
         <div class="sub">${bell(c.src)}${c.src === "nanji" ? `<span class="meta">접수중 존 · 날짜는 링크에서</span>` : `<span class="meta">${c.rows.length}일</span>`}</div></div>
       <div class="col-b">${c.rows.join("")}</div></div>`).join("")
     + full.map(c => `<div class="col mini" title="${esc(c.name)} — 전부 만석">
-      <div class="col-h"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name.replace(/가족|캠핑장|야영장|북한산 /g,"").trim() || c.name)}</a><span class="full">만석</span></div></div>`).join("");
+      <div class="col-h"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name.replace(/가족|캠핑장|야영장|북한산 /g,"").trim() || c.name)}</a><span class="full">${c.localOnly ? "PC에서만" : "만석"}</span></div></div>`).join("");
   $("#board").innerHTML = html || `<div class="empty">데이터 없음</div>`;
   const b = $("#board"); $("#hint").style.display = b.scrollWidth > b.clientWidth + 4 ? "" : "none";
 }

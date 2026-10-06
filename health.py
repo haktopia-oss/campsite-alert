@@ -42,7 +42,9 @@ def check(result: dict, now: datetime, sent_alerts: int, available: dict,
     reported = set(h.get("reported", []))  # 이미 고장 알림 보낸 src
     msgs = []
 
-    sources = [k for k, _, _ in collect.DATED] + ["nanji"]
+    sources = [k for k, _, _ in collect.DATED if not (collect.IN_CLOUD and k in collect.LOCAL_ONLY)] + ["nanji"]
+    broken = {k: v for k, v in broken.items() if k in sources}  # 감시 대상에서 빠진 곳은 정리
+    reported &= set(sources)
     for src in sources:
         why = _problem(src, result)
         if why:
