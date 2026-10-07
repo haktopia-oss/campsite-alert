@@ -59,21 +59,11 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
  },
- "j:5811789:2026-10-17": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-10-17",
-  "cat": "bbq",
-  "name": "바베큐(단체-8인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
- },
- "p:all:2026-11-14": {
+ "p:all:2026-11-21": {
   "src": "seoulpark",
   "place": "서울대공원 캠핑장",
   "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
-  "date": "2026-11-14",
+  "date": "2026-11-21",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
   "remain": 1,
