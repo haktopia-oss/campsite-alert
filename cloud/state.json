@@ -1,14 +1,4 @@
 {
- "j:6630650:2026-10-17": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-10-17",
-  "cat": "bbq",
-  "name": "프리미엄 단체 바베큐(텐트-10인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630650"
- },
  "j:5752252:2026-11-01": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -139,25 +129,15 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
- "u:all:2026-10-09": {
-  "src": "uidong",
-  "place": "우이동가족캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
-  "date": "2026-10-09",
+ "a:all:2026-10-24": {
+  "src": "angbong",
+  "place": "앵봉산가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec",
+  "date": "2026-10-24",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
   "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
- },
- "p:all:2026-10-10": {
-  "src": "seoulpark",
-  "place": "서울대공원 캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
-  "date": "2026-10-10",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
+  "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "n:S260901174901777245": {
   "src": "nanji",
