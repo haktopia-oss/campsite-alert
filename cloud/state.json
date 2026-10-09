@@ -169,6 +169,66 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855740"
  },
+ "j:5855741:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "3-6 오토캠핑 / 바닥(파쇄석)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855741"
+ },
+ "j:6210365:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "[비전기] 4-1 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210365"
+ },
+ "j:6210367:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "[비전기] 4-2 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210367"
+ },
+ "j:6210376:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "[비전기] 5-1 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210376"
+ },
+ "j:6210378:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "[비전기] 5-2 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210378"
+ },
+ "j:6210382:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "5-3 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210382"
+ },
  "n:S260901174901777245": {
   "src": "nanji",
   "month": 10,
