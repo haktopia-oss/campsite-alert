@@ -319,6 +319,76 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210445"
  },
+ "j:6210451:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "7-5 오토캠핑사이트/바닥",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210451"
+ },
+ "j:6210455:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "7-6 오토캠핑사이트/바닥",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210455"
+ },
+ "j:6210461:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "8-1 오토캠핑사이트/파쇄석",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210461"
+ },
+ "j:6210465:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "8-2 오토캠핑사이트/파쇄석",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210465"
+ },
+ "j:6210470:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "8-3 오토캠핑사이트/파쇄석",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210470"
+ },
+ "j:6210487:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "8-4 오토캠핑사이트/파쇄석",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210487"
+ },
+ "a:all:2026-10-10": {
+  "src": "angbong",
+  "place": "앵봉산가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec",
+  "date": "2026-10-10",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
+ },
  "p:all:2026-11-21": {
   "src": "seoulpark",
   "place": "서울대공원 캠핑장",
