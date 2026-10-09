@@ -99,15 +99,55 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
  },
- "a:all:2026-10-17": {
-  "src": "angbong",
-  "place": "앵봉산가족캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec",
-  "date": "2026-10-17",
+ "j:6209885:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
   "cat": "camp",
-  "name": "캠핑 사이트(전체)",
+  "name": "2-1 오토캠핑사이트/데크",
   "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6209885"
+ },
+ "j:6210354:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "2-2 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210354"
+ },
+ "j:6210358:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "3-1 오토캠핑사이트/바닥(파쇄석)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210358"
+ },
+ "j:6210361:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "3-2 오토캠핑사이트/바닥(파쇄석)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210361"
+ },
+ "j:5855731:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "3-3 오토캠핑 / 파쇄석",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855731"
  },
  "p:all:2026-11-21": {
   "src": "seoulpark",
