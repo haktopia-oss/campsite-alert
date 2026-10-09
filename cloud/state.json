@@ -424,12 +424,12 @@
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901173224696584"
  },
- "n:S260901185416139502": {
+ "n:S260901185737192457": {
   "src": "nanji",
   "month": 10,
   "cat": "bbq",
-  "name": "바비큐존(4인용, 2차:17시~22시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901185416139502"
+  "name": "바비큐존(8인용, 2차:17시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901185737192457"
  },
  "n:S260901183456275036": {
   "src": "nanji",
