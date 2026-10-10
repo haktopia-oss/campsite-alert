@@ -89,6 +89,16 @@
   "remain": 1,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
+ "p:all:2026-11-14": {
+  "src": "seoulpark",
+  "place": "서울대공원 캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
+  "date": "2026-11-14",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
+ },
  "p:all:2026-11-21": {
   "src": "seoulpark",
   "place": "서울대공원 캠핑장",
