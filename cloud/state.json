@@ -113,6 +113,13 @@
   "name": "일반캠핑존 B형(4인용, 자갈형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901180953339326"
  },
+ "n:S260901181759847800": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "camp",
+  "name": "일반캠핑존 C형(4인용, 데크형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901181759847800"
+ },
  "n:S260901182351878139": {
   "src": "nanji",
   "month": 10,
