@@ -16,7 +16,7 @@
   "date": "2026-10-24",
   "cat": "bbq",
   "name": "일반바베큐 오후(4인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630868"
  },
  "j:5752252:2026-10-31": {
@@ -197,19 +197,12 @@
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901173224696584"
  },
- "n:S260901184107910799": {
+ "n:S260901183456275036": {
   "src": "nanji",
   "month": 10,
   "cat": "bbq",
-  "name": "바비큐존(4인용, 1차:11시~16시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184107910799"
- },
- "n:S260901184513427044": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "bbq",
-  "name": "바비큐존(8인용, 1차:11시~16시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184513427044"
+  "name": "캠프파이어존 (15인용, 19시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901183456275036"
  },
  "n:S260929213404548953": {
   "src": "nanji",
@@ -253,6 +246,13 @@
   "name": "바비큐존(12인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929221413985153"
  },
+ "n:S260929222503885030": {
+  "src": "nanji",
+  "month": 11,
+  "cat": "bbq",
+  "name": "바비큐존(12인용, 2차:17시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929222503885030"
+ },
  "n:S260929220639500328": {
   "src": "nanji",
   "month": 11,
@@ -273,13 +273,6 @@
   "cat": "bbq",
   "name": "바비큐존(8인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929221037815946"
- },
- "n:S260929222125703456": {
-  "src": "nanji",
-  "month": 11,
-  "cat": "bbq",
-  "name": "바비큐존(8인용, 2차:17시~22시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929222125703456"
  },
  "n:S260929220210242937": {
   "src": "nanji",
