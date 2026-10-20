@@ -142,8 +142,9 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
         result, datetime.now(), len(msgs), now, cfg.get("token_expires"),
         os.environ.get("PAGES_URL") or "https://github.com")
     errs = []
+    paused = bool(cfg.get("paused"))  # notify.json "paused": true → 텔레그램 전부 멈춤 (확인·화면은 계속)
     for text, link in msgs + sys_msgs:
-        if dry or not telegram.configured():
+        if dry or paused or not telegram.configured():
             print("---- (미발송)\n" + text + "\n→ " + link)
             continue
         try:
@@ -155,7 +156,7 @@ def run(dry: bool = False) -> list[tuple[str, str]]:
     STATE.write_text(json.dumps({**now, "_sources": sorted(ok_sources),
                                  "_nanji_opened": sorted(nanji_opened)}, ensure_ascii=False, indent=1),
                      encoding="utf-8")
-    if (msgs or sys_msgs) and not dry:
+    if (msgs or sys_msgs) and not dry and not paused:
         _log_alerts(result["checked_at"], msgs + sys_msgs, sent_err)
     # 수집 오류 현황 (내용이 바뀔 때만 파일이 바뀌도록 시각은 넣지 않음)
     ERRORS.write_text(json.dumps(result["errors"], ensure_ascii=False, indent=1, sort_keys=True),

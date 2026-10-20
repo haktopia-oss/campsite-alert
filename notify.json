@@ -1,4 +1,6 @@
 {
+ "paused": true,
+ "_paused_설명": "true면 텔레그램 알림 전부 멈춤(고장·생존신호 포함). 확인·화면 갱신은 계속. 2026-10-20 사용자 요청(날씨 추워서 당분간)",
  "_설명": "알림 받을 캠핑장만 적기. jungnang=중랑, uidong=우이동, angbong=앵봉산, choan=초안산, nanji=난지, sagimak=사기막, gangdong=강동그린웨이, seoulpark=서울대공원. 빠진 곳도 화면에는 계속 표시됨",
  "notify": [
   "nanji",
