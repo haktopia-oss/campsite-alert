@@ -226,7 +226,7 @@
   "date": "2026-10-31",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 1,
+  "remain": 3,
   "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
  },
  "n:S260901174901777245": {
@@ -277,13 +277,6 @@
   "cat": "bbq",
   "name": "바비큐존(8인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901184513427044"
- },
- "n:S260901185737192457": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "bbq",
-  "name": "바비큐존(8인용, 2차:17시~22시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901185737192457"
  },
  "n:S260901183456275036": {
   "src": "nanji",
