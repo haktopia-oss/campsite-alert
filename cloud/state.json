@@ -1,14 +1,4 @@
 {
- "j:6630603:2026-11-01": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-11-01",
-  "cat": "bbq",
-  "name": "일반바베큐 오전(4인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630603"
- },
  "j:6630868:2026-11-01": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -209,15 +199,25 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
- "j:5855733:2026-10-31": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+ "a:all:2026-10-31": {
+  "src": "angbong",
+  "place": "앵봉산가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec",
   "date": "2026-10-31",
   "cat": "camp",
-  "name": "3-4 오토캠핑사이트 / 바닥(파쇄석)",
+  "name": "캠핑 사이트(전체)",
   "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855733"
+  "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
+ },
+ "p:all:2026-11-14": {
+  "src": "seoulpark",
+  "place": "서울대공원 캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
+  "date": "2026-11-14",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
  },
  "n:S260901174901777245": {
   "src": "nanji",
@@ -295,6 +295,13 @@
   "cat": "bbq",
   "name": "캠프파이어존 (15인용, 19시~22시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901183456275036"
+ },
+ "n:S260901182931610921": {
+  "src": "nanji",
+  "month": 10,
+  "cat": "bbq",
+  "name": "캠프파이어존 (8인용, 19시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901182931610921"
  },
  "n:S260929213404548953": {
   "src": "nanji",
