@@ -59,6 +59,16 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7526501"
  },
+ "j:7526501:2026-11-28": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-28",
+  "cat": "bbq",
+  "name": "감성바베큐 오전(4인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7526501"
+ },
  "j:7526537:2026-11-01": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -159,6 +169,16 @@
   "remain": 4,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
+ "j:6713469:2026-11-28": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-28",
+  "cat": "bbq",
+  "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
+  "remain": 3,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
+ },
  "j:6861189:2026-11-21": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -168,6 +188,26 @@
   "name": "글램핑(4인/주말(금-일) 및 공휴일)",
   "remain": 3,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "j:6861189:2026-11-28": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-28",
+  "cat": "glamp",
+  "name": "글램핑(4인/주말(금-일) 및 공휴일)",
+  "remain": 4,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
+ },
+ "u:all:2026-11-07": {
+  "src": "uidong",
+  "place": "우이동가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
  },
  "p:all:2026-11-14": {
   "src": "seoulpark",
