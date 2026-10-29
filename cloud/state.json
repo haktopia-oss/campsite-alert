@@ -106,7 +106,7 @@
   "date": "2026-11-07",
   "cat": "bbq",
   "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
-  "remain": 1,
+  "remain": 2,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
  "j:6713469:2026-11-08": {
@@ -189,16 +189,6 @@
   "remain": 4,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
  },
- "p:all:2026-11-07": {
-  "src": "seoulpark",
-  "place": "서울대공원 캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
-  "date": "2026-11-07",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
- },
  "p:all:2026-11-21": {
   "src": "seoulpark",
   "place": "서울대공원 캠핑장",
@@ -208,13 +198,6 @@
   "name": "캠핑 사이트(전체)",
   "remain": 1,
   "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
- },
- "n:S260901180953339326": {
-  "src": "nanji",
-  "month": 10,
-  "cat": "camp",
-  "name": "일반캠핑존 B형(4인용, 자갈형)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260901180953339326"
  },
  "n:S260901173224696584": {
   "src": "nanji",
