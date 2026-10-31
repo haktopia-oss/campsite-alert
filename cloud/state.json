@@ -16,7 +16,7 @@
   "date": "2026-11-29",
   "cat": "bbq",
   "name": "일반바베큐 오후(4인)",
-  "remain": 1,
+  "remain": 2,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630868"
  },
  "j:6630877:2026-11-01": {
@@ -269,6 +269,26 @@
   "remain": 4,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
  },
+ "j:6210394:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "5-4 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210394"
+ },
+ "j:6210399:2026-11-07": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "5-5 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210399"
+ },
  "j:6210487:2026-11-07": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -278,6 +298,26 @@
   "name": "8-4 오토캠핑사이트/파쇄석",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210487"
+ },
+ "p:all:2026-11-07": {
+  "src": "seoulpark",
+  "place": "서울대공원 캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
+  "date": "2026-11-07",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 2,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
+ },
+ "p:all:2026-11-21": {
+  "src": "seoulpark",
+  "place": "서울대공원 캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
+  "date": "2026-11-21",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 3,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
  },
  "n:S260929213404548953": {
   "src": "nanji",
@@ -313,13 +353,6 @@
   "cat": "camp",
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929215148688842"
- },
- "n:S260929212427230056": {
-  "src": "nanji",
-  "month": 11,
-  "cat": "glamp",
-  "name": "글램핑존 (4인용)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929212427230056"
  },
  "n:S260929221413985153": {
   "src": "nanji",
@@ -376,26 +409,6 @@
   "cat": "bbq",
   "name": "캠프파이어존 (8인용, 19시~22시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929215719785762"
- },
- "p:all:2026-11-07": {
-  "src": "seoulpark",
-  "place": "서울대공원 캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
-  "date": "2026-11-07",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 3,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
- },
- "p:all:2026-11-21": {
-  "src": "seoulpark",
-  "place": "서울대공원 캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058",
-  "date": "2026-11-21",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 3,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058"
  },
  "_sources": [
   "angbong",
