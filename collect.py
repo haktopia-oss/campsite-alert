@@ -24,8 +24,6 @@ DATED = [
     ("choan", "c", choan.collect),
     # 사기막(knps.collect("북한산 사기막야영장", "B141003", "사기막", "북한산"), 접두어 "s")은
     # 무공해차·도보·자전거만 입실 가능해서 당분간 제외 (2026-10-06). 다시 쓰려면 이 줄을 DATED에 되살리기.
-    ("seoulpark", "p", lambda: xticket.collect(
-        "서울대공원 캠핑장", "b4326b91b88249effc628d1b4cc714d2dec58eb3de89146841929db714ee7058")),
 ]
 PREFIX = {k: p for k, p, _ in DATED} | {"nanji": "n"}
 # 해외(GitHub) 서버 접속을 막는 사이트 → 클라우드에서는 건너뛰고 PC 화면에서만 표시
