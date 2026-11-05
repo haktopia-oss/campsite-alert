@@ -336,6 +336,13 @@
   "name": "일반캠핑존 A형(2인용, 자갈형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929213404548953"
  },
+ "n:S260929213902514299": {
+  "src": "nanji",
+  "month": 11,
+  "cat": "camp",
+  "name": "일반캠핑존 B형(4인용, 자갈형)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929213902514299"
+ },
  "n:S260929214439756525": {
   "src": "nanji",
   "month": 11,
@@ -378,6 +385,13 @@
   "name": "바비큐존(4인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929220639500328"
  },
+ "n:S260929221736737410": {
+  "src": "nanji",
+  "month": 11,
+  "cat": "bbq",
+  "name": "바비큐존(4인용, 2차:17시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929221736737410"
+ },
  "n:S260929221037815946": {
   "src": "nanji",
   "month": 11,
@@ -391,13 +405,6 @@
   "cat": "bbq",
   "name": "바비큐존(8인용, 2차:17시~22시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929222125703456"
- },
- "n:S260929220210242937": {
-  "src": "nanji",
-  "month": 11,
-  "cat": "bbq",
-  "name": "캠프파이어존 (15인용, 19시~22시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929220210242937"
  },
  "_sources": [
   "angbong",
