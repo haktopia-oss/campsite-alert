@@ -409,16 +409,6 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210394"
  },
- "u:all:2026-11-21": {
-  "src": "uidong",
-  "place": "우이동가족캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
-  "date": "2026-11-21",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
- },
  "a:all:2026-11-14": {
   "src": "angbong",
   "place": "앵봉산가족캠핑장",
@@ -501,13 +491,6 @@
   "cat": "bbq",
   "name": "바비큐존(8인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929221037815946"
- },
- "n:S260929222125703456": {
-  "src": "nanji",
-  "month": 11,
-  "cat": "bbq",
-  "name": "바비큐존(8인용, 2차:17시~22시)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929222125703456"
  },
  "n:S260929220210242937": {
   "src": "nanji",
