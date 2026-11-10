@@ -166,7 +166,7 @@
   "date": "2026-11-29",
   "cat": "bbq",
   "name": "감성바베큐 오전(4인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7526501"
  },
  "j:7526501:2026-12-05": {
@@ -384,16 +384,6 @@
   "place": "중랑가족캠핑장",
   "home": "https://m.booking.naver.com/booking/5/bizes/387475",
   "date": "2026-11-14",
-  "cat": "camp",
-  "name": "3-3 오토캠핑 / 파쇄석",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855731"
- },
- "j:5855731:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
   "cat": "camp",
   "name": "3-3 오토캠핑 / 파쇄석",
   "remain": 1,
