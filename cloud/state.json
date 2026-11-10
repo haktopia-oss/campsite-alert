@@ -396,7 +396,7 @@
   "date": "2026-11-14",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 1,
+  "remain": 2,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "a:all:2026-12-05": {
@@ -406,7 +406,7 @@
   "date": "2026-12-05",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 4,
+  "remain": 6,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "a:all:2026-12-12": {
@@ -426,7 +426,7 @@
   "date": "2026-12-19",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 8,
+  "remain": 9,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "a:all:2026-12-25": {
@@ -446,7 +446,7 @@
   "date": "2026-12-26",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 6,
+  "remain": 5,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "n:S260929213404548953": {
