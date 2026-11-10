@@ -359,16 +359,6 @@
   "remain": 6,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
- "j:5855731:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "3-3 오토캠핑 / 파쇄석",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855731"
- },
  "j:5855733:2026-12-05": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -378,26 +368,6 @@
   "name": "3-4 오토캠핑사이트 / 바닥(파쇄석)",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855733"
- },
- "u:all:2026-11-14": {
-  "src": "uidong",
-  "place": "우이동가족캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
-  "date": "2026-11-14",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
- },
- "u:all:2026-12-12": {
-  "src": "uidong",
-  "place": "우이동가족캠핑장",
-  "home": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
-  "date": "2026-12-12",
-  "cat": "camp",
-  "name": "캠핑 사이트(전체)",
-  "remain": 1,
-  "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
  },
  "u:all:2026-12-19": {
   "src": "uidong",
