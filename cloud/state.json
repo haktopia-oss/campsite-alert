@@ -66,7 +66,7 @@
   "date": "2026-11-28",
   "cat": "bbq",
   "name": "프리미엄 단체 바베큐(텐트-10인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630650"
  },
  "j:6630650:2026-12-06": {
@@ -296,7 +296,7 @@
   "date": "2026-11-14",
   "cat": "glamp",
   "name": "글램핑(4인/주말(금-일) 및 공휴일)",
-  "remain": 1,
+  "remain": 2,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6861189"
  },
  "j:6861189:2026-11-21": {
@@ -389,6 +389,16 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855731"
  },
+ "j:6210451:2026-11-28": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-28",
+  "cat": "camp",
+  "name": "7-5 오토캠핑사이트/바닥",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210451"
+ },
  "u:all:2026-12-05": {
   "src": "uidong",
   "place": "우이동가족캠핑장",
@@ -476,7 +486,7 @@
   "date": "2026-12-12",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 6,
+  "remain": 5,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "a:all:2026-12-19": {
