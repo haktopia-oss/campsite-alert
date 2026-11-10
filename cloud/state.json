@@ -389,16 +389,6 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210354"
  },
- "j:6210358:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "3-1 오토캠핑사이트/바닥(파쇄석)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210358"
- },
  "j:6210361:2026-12-05": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -459,16 +449,6 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210365"
  },
- "j:6210367:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "[비전기] 4-2 오토캠핑사이트/데크",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210367"
- },
  "j:6210394:2026-11-14": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -478,36 +458,6 @@
   "name": "5-4 오토캠핑사이트/데크",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210394"
- },
- "j:6210394:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "5-4 오토캠핑사이트/데크",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210394"
- },
- "j:6210399:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "5-5 오토캠핑사이트/데크",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210399"
- },
- "j:6210423:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "6-2 오토캠핑사이트/바닥",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210423"
  },
  "j:6210439:2026-12-05": {
   "src": "jungnang",
@@ -528,56 +478,6 @@
   "name": "7-3 오토캠핑사이트/바닥",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210442"
- },
- "j:6210442:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "7-3 오토캠핑사이트/바닥",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210442"
- },
- "j:6210445:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "7-4 오토캠핑사이트/바닥",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210445"
- },
- "j:6210461:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "8-1 오토캠핑사이트/파쇄석",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210461"
- },
- "j:6210465:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "8-2 오토캠핑사이트/파쇄석",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210465"
- },
- "j:6210470:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "camp",
-  "name": "8-3 오토캠핑사이트/파쇄석",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210470"
  },
  "n:S260929213404548953": {
   "src": "nanji",
@@ -613,13 +513,6 @@
   "cat": "camp",
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929215148688842"
- },
- "n:S260929212427230056": {
-  "src": "nanji",
-  "month": 11,
-  "cat": "glamp",
-  "name": "글램핑존 (4인용)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929212427230056"
  },
  "n:S260929221413985153": {
   "src": "nanji",
