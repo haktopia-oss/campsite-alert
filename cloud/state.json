@@ -429,6 +429,16 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5855740"
  },
+ "j:6210378:2026-11-14": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-14",
+  "cat": "camp",
+  "name": "[비전기] 5-2 오토캠핑사이트/데크",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210378"
+ },
  "j:6210394:2026-11-14": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -546,7 +556,7 @@
   "date": "2026-12-19",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 6,
+  "remain": 5,
   "url": "https://camp.xticket.kr/web/main?shopEncode=a12d6508ae5ea0562923cb1f2762761f3413ab4c988a6c8aa92ea7873e263bec"
  },
  "a:all:2026-12-26": {
