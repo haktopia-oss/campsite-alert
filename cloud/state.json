@@ -479,6 +479,16 @@
   "remain": 2,
   "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
  },
+ "u:all:2026-11-21": {
+  "src": "uidong",
+  "place": "우이동가족캠핑장",
+  "home": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f",
+  "date": "2026-11-21",
+  "cat": "camp",
+  "name": "캠핑 사이트(전체)",
+  "remain": 1,
+  "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
+ },
  "u:all:2026-12-05": {
   "src": "uidong",
   "place": "우이동가족캠핑장",
@@ -496,7 +506,7 @@
   "date": "2026-12-12",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 3,
+  "remain": 2,
   "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
  },
  "u:all:2026-12-19": {
