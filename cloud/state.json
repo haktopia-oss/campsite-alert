@@ -499,16 +499,6 @@
   "remain": 5,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
- "j:6210394:2026-11-14": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-11-14",
-  "cat": "camp",
-  "name": "5-4 오토캠핑사이트/데크",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210394"
- },
  "u:all:2026-12-05": {
   "src": "uidong",
   "place": "우이동가족캠핑장",
@@ -628,6 +618,13 @@
   "cat": "bbq",
   "name": "바비큐존(8인용, 1차:11시~16시)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929221037815946"
+ },
+ "n:S260929222125703456": {
+  "src": "nanji",
+  "month": 11,
+  "cat": "bbq",
+  "name": "바비큐존(8인용, 2차:17시~22시)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929222125703456"
  },
  "n:S260929220210242937": {
   "src": "nanji",
