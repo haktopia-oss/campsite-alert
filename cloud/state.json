@@ -59,6 +59,26 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630877"
  },
+ "j:6630877:2026-11-21": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-21",
+  "cat": "bbq",
+  "name": "일반바베큐 오후(8인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630877"
+ },
+ "j:6630877:2026-11-28": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-28",
+  "cat": "bbq",
+  "name": "일반바베큐 오후(8인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630877"
+ },
  "j:6630877:2026-11-29": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -99,6 +119,16 @@
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7462635"
  },
+ "j:7462635:2026-11-28": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-28",
+  "cat": "bbq",
+  "name": "일반바베큐 오전(12인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7462635"
+ },
  "j:7462634:2026-11-22": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -128,6 +158,16 @@
   "name": "일반바베큐 오후(12인)",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7462634"
+ },
+ "j:6630650:2026-11-14": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-14",
+  "cat": "bbq",
+  "name": "프리미엄 단체 바베큐(텐트-10인)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6630650"
  },
  "j:6630650:2026-11-15": {
   "src": "jungnang",
@@ -643,13 +683,6 @@
   "cat": "camp",
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929215148688842"
- },
- "n:S260929212427230056": {
-  "src": "nanji",
-  "month": 11,
-  "cat": "glamp",
-  "name": "글램핑존 (4인용)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929212427230056"
  },
  "n:S260929221413985153": {
   "src": "nanji",
