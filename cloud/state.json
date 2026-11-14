@@ -579,6 +579,16 @@
   "remain": 6,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
+ "j:6210361:2026-11-14": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-11-14",
+  "cat": "camp",
+  "name": "3-2 오토캠핑사이트/바닥(파쇄석)",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210361"
+ },
  "j:6210367:2026-11-14": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -588,16 +598,6 @@
   "name": "[비전기] 4-2 오토캠핑사이트/데크",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210367"
- },
- "j:6210378:2026-11-14": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-11-14",
-  "cat": "camp",
-  "name": "[비전기] 5-2 오토캠핑사이트/데크",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210378"
  },
  "j:6210399:2026-11-14": {
   "src": "jungnang",
