@@ -536,7 +536,7 @@
   "date": "2026-12-05",
   "cat": "camp",
   "name": "캠핑 사이트(전체)",
-  "remain": 1,
+  "remain": 2,
   "url": "https://camp.xticket.kr/web/main?shopEncode=13896b8dd3600159017b0e96c5bd5be7df3236beaa12b8fdb7aa462bab916b2f"
  },
  "n:S260929213404548953": {
@@ -664,6 +664,13 @@
   "cat": "camp",
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031154711965548"
+ },
+ "n:S261031151248140273": {
+  "src": "nanji",
+  "month": 12,
+  "cat": "glamp",
+  "name": "글램핑존 (4인용)",
+  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031151248140273"
  },
  "n:S261031160200683188": {
   "src": "nanji",
