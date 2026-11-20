@@ -456,7 +456,7 @@
   "date": "2026-12-05",
   "cat": "bbq",
   "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
-  "remain": 4,
+  "remain": 3,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
  "j:6713469:2026-12-06": {
@@ -476,7 +476,7 @@
   "date": "2026-12-12",
   "cat": "bbq",
   "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
-  "remain": 3,
+  "remain": 2,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
  "j:6713469:2026-12-13": {
@@ -487,16 +487,6 @@
   "cat": "bbq",
   "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
   "remain": 4,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
- },
- "j:6713469:2026-12-19": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-19",
-  "cat": "bbq",
-  "name": "럭셔리바베큐(4인/주말(금-일) 및 공휴일)",
-  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6713469"
  },
  "j:6713469:2026-12-20": {
