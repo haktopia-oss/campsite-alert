@@ -216,16 +216,6 @@
   "date": "2026-11-29",
   "cat": "bbq",
   "name": "바베큐(커플/가족-4인)",
-  "remain": 2,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5752252"
- },
- "j:5752252:2026-12-05": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-05",
-  "cat": "bbq",
-  "name": "바베큐(커플/가족-4인)",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5752252"
  },
@@ -239,16 +229,6 @@
   "remain": 2,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5752252"
  },
- "j:5752252:2026-12-12": {
-  "src": "jungnang",
-  "place": "중랑가족캠핑장",
-  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
-  "date": "2026-12-12",
-  "cat": "bbq",
-  "name": "바베큐(커플/가족-4인)",
-  "remain": 1,
-  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5752252"
- },
  "j:5752252:2026-12-13": {
   "src": "jungnang",
   "place": "중랑가족캠핑장",
@@ -256,7 +236,7 @@
   "date": "2026-12-13",
   "cat": "bbq",
   "name": "바베큐(커플/가족-4인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5752252"
  },
  "j:5752252:2026-12-19": {
@@ -286,7 +266,7 @@
   "date": "2026-12-06",
   "cat": "bbq",
   "name": "감성바베큐 오전(4인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/7526501"
  },
  "j:7526501:2026-12-19": {
