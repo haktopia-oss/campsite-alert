@@ -662,13 +662,6 @@
   "name": "프리캠핑존 (4인용, 잔디형)",
   "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031154711965548"
  },
- "n:S261031151248140273": {
-  "src": "nanji",
-  "month": 12,
-  "cat": "glamp",
-  "name": "글램핑존 (4인용)",
-  "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031151248140273"
- },
  "n:S261031160200683188": {
   "src": "nanji",
   "month": 12,
