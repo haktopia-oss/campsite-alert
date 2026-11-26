@@ -1,5 +1,11 @@
 [
  {
+  "at": "2026-11-26T18:30:43",
+  "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 12월 [글램핑] 글램핑존 (4인용)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
+  "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031151248140273",
+  "error": null
+ },
+ {
   "at": "2026-11-26T17:30:37",
   "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 12월 [캠핑] 일반캠핑존 D형(4인용, 자갈형)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
   "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031154046761002",
@@ -291,12 +297,6 @@
   "at": "2026-11-22T19:40:36",
   "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 12월 [글램핑] 글램핑존 (4인용)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
   "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261031151248140273",
-  "error": null
- },
- {
-  "at": "2026-11-22T15:50:38",
-  "text": "🏕️ 난지캠핑장 마감→접수중 (취소표)\n• 11월 [글램핑] 글램핑존 (4인용)\n⚠️ 날짜는 몰라요 — 평일일 수도 있으니 달력에서 확인",
-  "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260929212427230056",
   "error": null
  }
 ]
