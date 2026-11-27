@@ -696,7 +696,7 @@
   "date": "2026-11-29",
   "cat": "bbq",
   "name": "바베큐(단체-8인)",
-  "remain": 2,
+  "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/5811789"
  },
  "j:5811789:2026-12-05": {
@@ -808,6 +808,16 @@
   "name": "[비전기] 5-1 오토캠핑사이트/데크",
   "remain": 1,
   "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210376"
+ },
+ "j:6210434:2026-12-05": {
+  "src": "jungnang",
+  "place": "중랑가족캠핑장",
+  "home": "https://m.booking.naver.com/booking/5/bizes/387475",
+  "date": "2026-12-05",
+  "cat": "camp",
+  "name": "7-1 오토캠핑사이트/바닥",
+  "remain": 1,
+  "url": "https://m.booking.naver.com/booking/5/bizes/387475/items/6210434"
  },
  "u:all:2026-12-05": {
   "src": "uidong",
